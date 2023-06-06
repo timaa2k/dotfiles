@@ -4,6 +4,9 @@ case $- in
       *) return;;
 esac
 
+# Set PATH variable
+export PATH=${HOME}/bin:${HOME}/.local/bin:${PATH}
+
 # No locking on Ctrl-S
 stty -ixon
 

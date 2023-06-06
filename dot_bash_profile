@@ -1,0 +1,2 @@
+# Cause .bashrc to be sourced on MacOS
+source ~/.bashrc
