@@ -4,6 +4,9 @@ case $- in
       *) return;;
 esac
 
+# Set SHELL variable
+export SHELL=$(which bash)
+
 # Set PATH variable
 export PATH=${HOME}/bin:${HOME}/.local/bin:${PATH}
 
