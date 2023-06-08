@@ -1,0 +1,2 @@
+nix-build https://github.com/LnL7/nix-darwin/archive/40e4b85baac86969f94d6dba893aeae015c562c1.tar.gz -A installer
+./result/bin/darwin-installer
