@@ -59,17 +59,6 @@ fi
 ## Aliases
 ##
 
-alias ..="cd ..";
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-alias wd="j";
-alias vim="nvim"
-alias :e="vim"
-
-alias xo="xdg-open"
-alias tmp='cd $(mktemp -d)'
-
 alias gti="git"
 alias gd="git diff"
 alias git-delete-merged="git branch --merged | egrep -v '(^\*|master|dev)' | xargs git branch -d"

@@ -1,1 +1,7 @@
 README.md
+flake.lock
+result
+nix
+nix-install.sh
+nix-rebuild-switch.sh
+nix-uninstall.sh
