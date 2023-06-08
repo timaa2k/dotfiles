@@ -1,26 +1,25 @@
-call plug#begin('~/.vim/plugged')
+"call plug#begin('~/.vim/plugged')
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'edkolev/tmuxline.vim'
-Plug 'flazz/vim-colorschemes'
-Plug 'shougo/echodoc.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-Plug 'ap/vim-css-color'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'hashivim/vim-terraform'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'bronson/vim-trailing-whitespace'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'airblade/vim-gitgutter'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+"Plug 'edkolev/tmuxline.vim'
+"Plug 'flazz/vim-colorschemes'
+"Plug 'shougo/echodoc.vim'
+"Plug 'scrooloose/nerdtree'
+"Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-commentary'
+"Plug 'tpope/vim-surround'
+"Plug 'ap/vim-css-color'
+"Plug 'Xuyuanp/nerdtree-git-plugin'
+"Plug 'hashivim/vim-terraform'
+"Plug 'christoomey/vim-tmux-navigator'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'bronson/vim-trailing-whitespace'
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+"Plug 'airblade/vim-gitgutter'
+"Plug 'zefei/vim-wintabs'
 
-Plug 'zefei/vim-wintabs'
-
-call plug#end()
+"call plug#end()
 
 " ============================================================================ "
 " ===                           GENERAL SETTINGS                           === "
