@@ -48,6 +48,7 @@ in
 {
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
+  services.nix-daemon.enable = true;
 
   environment.systemPackages = with pkgs; [
     youtube-dl
@@ -68,7 +69,6 @@ in
     neovimWithPlugins 
   ];
 
-  environment.shells = [ pkgs.bash ];
-
   programs.bash.enable = true;
+  environment.shells = with pkgs; [ bashInteractive ];
 }
