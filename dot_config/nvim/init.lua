@@ -1,3 +1,4 @@
+require('seoul256')
 require('plugins')
 require('general')
 require('appearance')
