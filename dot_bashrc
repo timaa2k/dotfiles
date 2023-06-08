@@ -59,6 +59,7 @@ fi
 ## Aliases
 ##
 
+alias vim="nvim"
 alias gti="git"
 alias gd="git diff"
 alias git-delete-merged="git branch --merged | egrep -v '(^\*|master|dev)' | xargs git branch -d"
