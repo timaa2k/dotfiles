@@ -5,102 +5,104 @@ local M = {}
 -- Syntax highlight groups
 -- Type `:h syntax` for more informations
 M.syntax = {
-    Boolean = { fg = colors.orange },
-    Character = { fg = colors.orange },
-    Comment = { fg = colors.green },
-    Conditional = { fg = colors.purple },
-    Constant = { fg = colors.yellow },
-    Debug = { fg = colors.red },
-    Define = { fg = colors.pink },
-    Delimiter = { fg = colors.cyan },
-    Error = { fg = colors.error, bg = colors.none, style = "underline,bold" },
-    Exception = { fg = colors.cyan },
-    Float = { fg = colors.orange },
-    Function = { fg = colors.blue },
-    Identifier = { fg = colors.pink },
-    Ignore = { fg = colors.disabled },
-    Include = { fg = colors.blue },
-    Keyword = { fg = colors.purple },
-    Label = { fg = colors.purple },
-    Macro = { fg = colors.cyan },
-    Number = { fg = colors.orange },
-    Operator = { fg = colors.cyan },
-    PreCondit = { fg = colors.cyan },
-    PreProc = { fg = colors.purple },
-    Repeat = { fg = colors.purple },
-    Special = { fg = colors.red },
-    SpecialChar = { fg = colors.pink },
-    SpecialComment = { fg = colors.gray },
-    Statement = { fg = colors.pink },
-    StorageClass = { fg = colors.cyan },
-    String = { fg = colors.string, bg = colors.none, style = "italic" },
-    Structure = { fg = colors.puple },
-    Tag = { fg = colors.red },
-    Todo = { fg = colors.yellow, bg = colors.none, style = "bold,italic" },
-    Type = { fg = colors.purple },
-    Typedef = { fg = colors.red },
-    Underlined = { fg = colors.link, bg = colors.none, style = "underline" },
+    Boolean = { fg = colors.dark_yellow },
+    Character = { fg = colors.dark_yellow },
+    Comment = { fg = colors.dark_green },
+    Conditional = { fg = colors.dark_magenta },
+    Constant = { fg = colors.dark_yellow },
+    Debug = { fg = colors.dark_red },
+    Define = { fg = colors.light_red },
+    Delimiter = { fg = colors.dark_cyan },
+    Error = { fg = colors.dark_red, bg = colors.none, style = "underline,bold" },
+    Exception = { fg = colors.dark_cyan },
+    Float = { fg = colors.dark_yellow },
+    Function = { fg = colors.dark_blue },
+    Identifier = { fg = colors.light_red },
+    Ignore = { fg = colors.dark_white },
+    Include = { fg = colors.dark_blue },
+    Keyword = { fg = colors.dark_magenta },
+    Label = { fg = colors.dark_magenta },
+    Macro = { fg = colors.dark_cyan },
+    Number = { fg = colors.dark_yellow },
+    Operator = { fg = colors.dark_cyan },
+    PreCondit = { fg = colors.dark_cyan },
+    PreProc = { fg = colors.dark_magenta },
+    Repeat = { fg = colors.dark_magenta },
+    Special = { fg = colors.dark_red },
+    SpecialChar = { fg = colors.light_red },
+    SpecialComment = { fg = colors.light_black },
+    Statement = { fg = colors.light_red },
+    StorageClass = { fg = colors.dark_cyan },
+    String = { fg = colors.dark_black, bg = colors.none, style = "italic" },
+    Structure = { fg = colors.dark_magenta },
+    Tag = { fg = colors.dark_red },
+    Todo = { fg = colors.dark_yellow, bg = colors.none, style = "bold,italic" },
+    Type = { fg = colors.dark_magenta },
+    Typedef = { fg = colors.dark_red },
+    Underlined = { fg = colors.dark_blue, bg = colors.none, style = "underline" },
 }
 
 -- Editor highlight groups
 -- Type `:h highlight-groups` for more informations
 M.editor = {
-    ColorColumn = { fg = colors.none, bg = colors.active },
-    Conceal = { fg = colors.disabled },
-    Cursor = { fg = colors.cursor, bg = colors.none, style = "reverse" },
-    lCursor = {}, -- TODO
-    CursorColumn = { fg = colors.none, bg = colors.active },
-    CursorIM = { fg = colors.cursor, bg = colors.none, style = "reverse" },
-    CursorLine = { fg = colors.none, bg = colors.none },
-    CursorLineNr = { fg = colors.accent },
-    DiffAdd = { fg = colors.green, bg = colors.none, style = "reverse" },
-    DiffChange = { fg = colors.orange, bg = colors.none, style = "reverse" },
-    DiffDelete = { fg = colors.red, bg = colors.none, style = "reverse" },
-    DiffText = { fg = colors.yellow, bg = colors.none, style = "reverse" },
-    Directory = { fg = colors.blue, bg = colors.none },
-    EndOfBuffer = { fg = colors.disabled },
-    ErrorMsg = { fg = colors.none },
-    FoldColumn = { fg = colors.blue },
-    Folded = { fg = colors.green, bg = colors.bg_alt, style = "italic" },
-    IncSearch = { fg = colors.highlight, bg = colors.white, style = "reverse" },
-    LineNr = { fg = colors.line_numbers },
-    MatchParen = { fg = colors.yellow, bg = colors.none, style = "bold" },
-    ModeMsg = { fg = colors.accent },
-    MoreMsg = { fg = colors.accent },
-    MsgArea = {}, -- TODO
-    MsgSeparator = {}, -- TODO
-    NonText = { fg = colors.disabled },
-    Normal = { fg = colors.fg, bg = colors.bg },
-    NormalFloat = { fg = colors.fg, bg = colors.float },
-    NormalNC = {}, -- TODO
-    Pmenu = { fg = colors.text, bg = colors.contrast },
-    PmenuSbar = { fg = colors.text, bg = colors.contrast },
-    PmenuSel = { fg = colors.accent, bg = colors.active },
-    PmenuThumb = { fg = colors.fg, bg = colors.accent },
-    Question = { fg = colors.green },
-    QuickFixLine = { fg = colors.highlight, bg = colors.white, style = "reverse" },
-    Search = { fg = colors.highlight, bg = colors.white, style = "reverse" },
-    SignColumn = { fg = colors.fg, bg = colors.bg },
-    SpecialKey = { fg = colors.purple },
-    SpellBad = { fg = colors.red, bg = colors.none, style = "undercurl,italic" },
-    SpellCap = { fg = colors.blue, bg = colors.none, style = "undercurl,italic" },
-    SpellLocal = { fg = colors.cyan, bg = colors.none, style = "undercurl,italic" },
-    SpellRare = { fg = colors.purple, bg = colors.none, style = "undercurl,italic" },
-    StatusLine = { fg = colors.fg, bg = colors.bg_alt },
-    StatusLineNC = { fg = colors.text, bg = colors.disabled },
-    Substitute = {}, -- TODO
-    TabLineFill = { fg = colors.fg },
-    Tabline = { fg = colors.fg },
-    TablineSel = { fg = colors.bg, bg = colors.accent },
-    TermCursor = {}, -- TODO
-    TermCursorNC = {}, -- TODO
-    Title = { fg = colors.green, bg = colors.none, style = "bold" },
-    VertSplit = { fg = colors.bg },
-    Visual = { fg = colors.none, bg = colors.selection },
-    VisualNOS = { fg = colors.none, bg = colors.selection },
-    WarningMsg = { fg = colors.yellow },
-    Whitespace = {}, -- TODO
-    WildMenu = { fg = colors.orange, bg = colors.none, style = "bold" },
+    ColorColumn = {},
+    Conceal = {},
+    Cursor = { fg = colors.background, bg = colors.foreground },
+    lCursor = {},
+    CursorColumn = {},
+    CursorIM = {},
+    CursorLine = { fg = colors.none, bg = colors.extra_white },
+    CursorLineNr = { fg = colors.foreground, bg = colors.extra_white },
+    DiffAdd = {},
+    DiffChange = {},
+    DiffDelete = {},
+    DiffText = {},
+    Directory = {},
+    EndOfBuffer = { fg = colors.foreground, bg = colors.none },
+    ErrorMsg = {},
+    FoldColumn = { fg = colors.light_magenta, bg=colors.none },
+    Folded = { fg = colors.none, bg = colors.none },
+    IncSearch = { fg = colors.background, bg = colors.light_magenta },
+    LineNr = { fg = colors.dark_white, bg = colors.background },
+    MatchParen = { fg = colors.none, bg = colors.dark_white },
+    ModeMsg = { fg = colors.none, bg = colors.none },
+    MoreMsg = { fg = colors.none, bg = colors.none },
+    MsgArea = {},
+    MsgSeparator = {},
+    NonText = {},
+    Normal = { fg = colors.foreground, bg = colors.background },
+    NormalFloat = {},
+    NormalNC = {},
+    Pmenu = { fg = colors.light_magenta, bg = colors.extra_white },
+    PmenuSbar = { fg = colors.light_magenta, bg = colors.extra_white },
+    PmenuSel = { fg = colors.none, bg = colors.dark_white },
+    PmenuThumb = { fg = colors.light_magenta, bg = colors.extra_white },
+    Question = { fg = colors.light_green, bg = colors.none },
+    QuickFixLine = {},
+    Search = { fg = colors.background, bg = colors.light_magenta },
+    SignColumn = { fg = colors.light_magenta, bg = colors.none },
+    SpecialKey = { fg = colors.light_cyan, bg = colors.none },
+    SpellBad = { fg = colors.dark_red, bg = colors.extra_white, style = "underline" },
+    SpellCap = { fg = colors.light_yellow, bg = colors.extra_white, style = "underline" },
+
+    SpellLocal = { fg = colors.light_yellow, bg = colors.extra_white, style = "underline" },
+
+    SpellRare = { fg = colors.light_yellow, bg = colors.extra_white, style = "underline" },
+    StatusLine = { fg = colors.light_magenta, bg = colors.dark_white },
+    StatusLineNC = { fg = colors.extra_white, bg = colors.none, style = "underline" },
+    Substitute = {},
+    TabLineFill = { fg = colors.light_magenta, bg = colors.extra_white },
+    Tabline = { fg = colors.light_magenta, bg = colors.extra_white },
+    TablineSel = { fg = colors.none, bg = colors.extra_white },
+    TermCursor = {},
+    TermCursorNC = {},
+    Title = { fg = colors.none, bg = colors.none },
+    VertSplit = { fg = colors.extra_white, bg = colors.none },
+    Visual = { fg = colors.none, bg = colors.light_white },
+    VisualNOS = { fg = colors.none, bg = colors.light_white },
+    WarningMsg = { fg = colors.background, bg = colors.light_yellow },
+    Whitespace = {},
+    WildMenu = { fg = colors.light_magenta, bg = colors.none },
 
     -- GUI only
     Menu = {},
@@ -111,66 +113,66 @@ M.editor = {
 -- TreeSitter highlight groups
 -- Type `:h nvim-treesitter-highlights` for more informations
 M.treesitter = {
-    TSAttribute = { fg = colors.yellow },
-    TSBoolean = { fg = colors.orange },
-    TSCharacter = { fg = colors.orange },
-    TSComment = { fg = colors.green },
-    TSConditional = { fg = colors.purple },
-    TSConstBuiltin = { fg = colors.blue },
-    TSConstMacro = { fg = colors.blue },
-    TSConstant = { fg = colors.yellow },
-    TSConstructor = { fg = colors.purple },
+    TSAttribute = { fg = colors.dark_yellow },
+    TSBoolean = { fg = colors.dark_yellow },
+    TSCharacter = { fg = colors.dark_yellow },
+    TSComment = { fg = colors.dark_green },
+    TSConditional = { fg = colors.dark_magenta },
+    TSConstBuiltin = { fg = colors.dark_blue },
+    TSConstMacro = { fg = colors.dark_blue },
+    TSConstant = { fg = colors.dark_yellow },
+    TSConstructor = { fg = colors.dark_magenta },
     TSDanger = {}, -- TODO
-    TSEmphasis = { fg = colors.paleblue },
+    TSEmphasis = { fg = colors.light_dark_blue },
     TSEnvironment = {}, -- TODO
     TSEnvironmentName = {}, -- TODO
-    TSError = { fg = colors.error },
-    TSException = { fg = colors.yellow },
-    TSField = { fg = colors.gray },
-    TSFloat = { fg = colors.red },
-    TSFuncBuiltin = { fg = colors.cyan },
-    TSFuncMacro = { fg = colors.blue },
-    TSFunction = { fg = colors.blue },
-    TSInclude = { fg = colors.cyan },
-    TSKeyword = { fg = colors.purple },
-    TSKeywordFunction = { fg = colors.purple },
+    TSError = { fg = colors.dark_red },
+    TSException = { fg = colors.dark_yellow },
+    TSField = { fg = colors.light_black },
+    TSFloat = { fg = colors.dark_red },
+    TSFuncBuiltin = { fg = colors.dark_cyan },
+    TSFuncMacro = { fg = colors.dark_blue },
+    TSFunction = { fg = colors.dark_blue },
+    TSInclude = { fg = colors.dark_cyan },
+    TSKeyword = { fg = colors.dark_magenta },
+    TSKeywordFunction = { fg = colors.dark_magenta },
     TSKeywordOperator = {}, -- TODO
     TSKeywordReturn = {}, -- TODO
-    TSLabel = { fg = colors.red },
-    TSLiteral = { fg = colors.fg },
+    TSLabel = { fg = colors.dark_red },
+    TSLiteral = { fg = colors.foreground },
     TSMath = {}, -- TODO
-    TSMethod = { fg = colors.blue },
-    TSNamespace = { fg = colors.yellow },
+    TSMethod = { fg = colors.dark_blue },
+    TSNamespace = { fg = colors.dark_yellow },
     TSNone = {}, -- TODO
     TSNote = {}, -- TODO
-    TSNumber = { fg = colors.orange },
-    TSOperator = { fg = colors.cyan },
-    TSParameter = { fg = colors.paleblue },
-    TSParameterReference = { fg = colors.paleblue },
-    TSProperty = { fg = colors.paleblue },
-    TSPunctBracket = { fg = colors.cyan },
-    TSPunctDelimiter = { fg = colors.cyan },
-    TSPunctSpecial = { fg = colors.cyan },
-    TSRepeat = { fg = colors.purple },
+    TSNumber = { fg = colors.dark_yellow },
+    TSOperator = { fg = colors.dark_cyan },
+    TSParameter = { fg = colors.light_dark_blue },
+    TSParameterReference = { fg = colors.light_dark_blue },
+    TSProperty = { fg = colors.light_dark_blue },
+    TSPunctBracket = { fg = colors.dark_cyan },
+    TSPunctDelimiter = { fg = colors.dark_cyan },
+    TSPunctSpecial = { fg = colors.dark_cyan },
+    TSRepeat = { fg = colors.dark_magenta },
     TSStrike = {}, -- TODO
-    TSString = { fg = colors.string },
-    TSStringEscape = { fg = colors.disabled },
-    TSStringRegex = { fg = colors.blue },
+    TSString = { fg = colors.dark_black },
+    TSStringEscape = { fg = colors.dark_white },
+    TSStringRegex = { fg = colors.dark_blue },
     TSStringSpecial = {}, -- TODO
     TSStrong = {}, -- TODO
-    TSSymbol = { fg = colors.yellow },
-    TSTag = { fg = colors.red },
+    TSSymbol = { fg = colors.dark_yellow },
+    TSTag = { fg = colors.dark_red },
     TSTagAttribute = {}, -- TODO
-    TSTagDelimiter = { fg = colors.yellow },
-    TSText = { fg = colors.text },
-    TSTextReference = { fg = colors.yellow }, -- FIXME ???
-    TSTitle = { fg = colors.paleblue, bg = colors.none, style = "bold" },
-    TSType = { fg = colors.purple },
-    TSTypeBuiltin = { fg = colors.purple },
-    TSURI = { fg = colors.link },
-    TSUnderline = { fg = colors.fg, bg = colors.none, style = "underline" },
-    TSVariable = { fg = colors.gray },
-    TSVariableBuiltin = { fg = colors.gray },
+    TSTagDelimiter = { fg = colors.dark_yellow },
+    TSText = { fg = colors.foreground },
+    TSTextReference = { fg = colors.dark_yellow }, -- FIXME ???
+    TSTitle = { fg = colors.light_dark_blue, bg = colors.none, style = "bold" },
+    TSType = { fg = colors.dark_magenta },
+    TSTypeBuiltin = { fg = colors.dark_magenta },
+    TSURI = { fg = colors.dark_blue },
+    TSUnderline = { fg = colors.foreground, bg = colors.none, style = "underline" },
+    TSVariable = { fg = colors.light_black },
+    TSVariableBuiltin = { fg = colors.light_black },
     TSWarning = {}, -- TODO
 }
 
@@ -178,212 +180,212 @@ M.treesitter = {
 -- Type `:h lsp-highlight` for more informations
 M.lsp = {
     LspCodeLens = {}, -- TODO
-    LspDiagnosticsDefaultError = { fg = colors.error },
-    LspDiagnosticsDefaultHint = { fg = colors.purple },
-    LspDiagnosticsDefaultInformation = { fg = colors.paleblue },
-    LspDiagnosticsDefaultWarning = { fg = colors.yellow },
-    LspDiagnosticsFloatingError = { fg = colors.error },
-    LspDiagnosticsFloatingHint = { fg = colors.purple },
-    LspDiagnosticsFloatingInformation = { fg = colors.paleblue },
-    LspDiagnosticsFloatingWarning = { fg = colors.yellow },
-    LspDiagnosticsSignError = { fg = colors.error },
-    LspDiagnosticsSignHint = { fg = colors.purple },
-    LspDiagnosticsSignInformation = { fg = colors.paleblue },
-    LspDiagnosticsSignWarning = { fg = colors.yellow },
-    LspDiagnosticsUnderlineError = { style = "undercurl", sp = colors.error },
-    LspDiagnosticsUnderlineHint = { style = "undercurl", sp = colors.paleblue },
-    LspDiagnosticsUnderlineInformation = { style = "undercurl", sp = colors.paleblue },
-    LspDiagnosticsUnderlineWarning = { style = "undercurl", sp = colors.yellow },
-    LspDiagnosticsVirtualTextError = { fg = colors.error },
-    LspDiagnosticsVirtualTextHint = { fg = colors.purple },
-    LspDiagnosticsVirtualTextInformation = { fg = colors.paleblue },
-    LspDiagnosticsVirtualTextWarning = { fg = colors.yellow },
-    LspReferenceRead = { fg = colors.accent, bg = colors.highlight },
-    LspReferenceText = { fg = colors.accent, bg = colors.highlight },
-    LspReferenceWrite = { fg = colors.accent, bg = colors.highlight },
+    LspDiagnosticsDefaultError = { fg = colors.dark_red },
+    LspDiagnosticsDefaultHint = { fg = colors.dark_magenta },
+    LspDiagnosticsDefaultInformation = { fg = colors.light_dark_blue },
+    LspDiagnosticsDefaultWarning = { fg = colors.dark_yellow },
+    LspDiagnosticsFloatingError = { fg = colors.dark_red },
+    LspDiagnosticsFloatingHint = { fg = colors.dark_magenta },
+    LspDiagnosticsFloatingInformation = { fg = colors.light_dark_blue },
+    LspDiagnosticsFloatingWarning = { fg = colors.dark_yellow },
+    LspDiagnosticsSignError = { fg = colors.dark_red },
+    LspDiagnosticsSignHint = { fg = colors.dark_magenta },
+    LspDiagnosticsSignInformation = { fg = colors.light_dark_blue },
+    LspDiagnosticsSignWarning = { fg = colors.dark_yellow },
+    LspDiagnosticsUnderlineError = { style = "undercurl", sp = colors.dark_red },
+    LspDiagnosticsUnderlineHint = { style = "undercurl", sp = colors.light_dark_blue },
+    LspDiagnosticsUnderlineInformation = { style = "undercurl", sp = colors.light_dark_blue },
+    LspDiagnosticsUnderlineWarning = { style = "undercurl", sp = colors.dark_yellow },
+    LspDiagnosticsVirtualTextError = { fg = colors.dark_red },
+    LspDiagnosticsVirtualTextHint = { fg = colors.dark_magenta },
+    LspDiagnosticsVirtualTextInformation = { fg = colors.light_dark_blue },
+    LspDiagnosticsVirtualTextWarning = { fg = colors.dark_yellow },
+    LspReferenceRead = { fg = colors.light_blue, bg = colors.dark_yellow },
+    LspReferenceText = { fg = colors.light_blue, bg = colors.dark_yellow },
+    LspReferenceWrite = { fg = colors.light_blue, bg = colors.dark_yellow },
 }
 
 -- Plugins highlight groups
 M.plugins = {
     LspTrouble = {
-        LspTroubleText = { fg = colors.text },
-        LspTroubleCount = { fg = colors.purple, bg = colors.active },
-        LspTroubleNormal = { fg = colors.fg, bg = colors.sidebar },
+        LspTroubleText = { fg = colors.foreground },
+        LspTroubleCount = { fg = colors.dark_magenta, bg = colors.light_black },
+        LspTroubleNormal = { fg = colors.foreground, bg = colors.dark_white },
     },
     Diff = {
-        diffAdded = { fg = colors.green },
-        diffRemoved = { fg = colors.red },
-        diffChanged = { fg = colors.yellow },
-        diffOldFile = { fg = colors.yellow },
-        diffNewFile = { fg = colors.orange },
-        diffFile = { fg = colors.blue },
-        diffLine = { fg = colors.green },
-        diffIndexLine = { fg = colors.purple },
+        diffAdded = { fg = colors.dark_green },
+        diffRemoved = { fg = colors.dark_red },
+        diffChanged = { fg = colors.dark_yellow },
+        diffOldFile = { fg = colors.dark_yellow },
+        diffNewFile = { fg = colors.dark_yellow },
+        diffFile = { fg = colors.dark_blue },
+        diffLine = { fg = colors.dark_green },
+        diffIndexLine = { fg = colors.dark_magenta },
     },
 
     Neogit = {
-        NeogitBranch = { fg = colors.paleblue },
-        NeogitRemote = { fg = colors.purple },
-        NeogitHunkHeader = { fg = colors.fg, bg = colors.highlight },
-        NeogitHunkHeaderHighlight = { fg = colors.blue, bg = colors.contrast },
-        NeogitDiffContextHighlight = { fg = colors.text, bg = colors.contrast },
-        NeogitDiffDeleteHighlight = { fg = colors.red },
-        NeogitDiffAddHighlight = { fg = colors.green },
+        NeogitBranch = { fg = colors.light_dark_blue },
+        NeogitRemote = { fg = colors.dark_magenta },
+        NeogitHunkHeader = { fg = colors.foreground, bg = colors.dark_yellow },
+        NeogitHunkHeaderHighlight = { fg = colors.dark_blue, bg = colors.contrast },
+        NeogitDiffContextHighlight = { fg = colors.foreground, bg = colors.contrast },
+        NeogitDiffDeleteHighlight = { fg = colors.dark_red },
+        NeogitDiffAddHighlight = { fg = colors.dark_green },
     },
 
     GitGutter = {
-        GitGutterAdd = { fg = colors.green },
-        GitGutterChange = { fg = colors.yellow },
-        GitGutterDelete = { fg = colors.red },
+        GitGutterAdd = { fg = colors.dark_green },
+        GitGutterChange = { fg = colors.dark_yellow },
+        GitGutterDelete = { fg = colors.dark_red },
     },
 
     GitSigns = {
-        GitSignsAdd = { fg = colors.green },
-        GitSignsAddNr = { fg = colors.green },
-        GitSignsAddLn = { fg = colors.green },
-        GitSignsChange = { fg = colors.yellow },
-        GitSignsChangeNr = { fg = colors.yellow },
-        GitSignsChangeLn = { fg = colors.yellow },
-        GitSignsDelete = { fg = colors.red },
-        GitSignsDeleteNr = { fg = colors.red },
-        GitSignsDeleteLn = { fg = colors.red },
+        GitSignsAdd = { fg = colors.dark_green },
+        GitSignsAddNr = { fg = colors.dark_green },
+        GitSignsAddLn = { fg = colors.dark_green },
+        GitSignsChange = { fg = colors.dark_yellow },
+        GitSignsChangeNr = { fg = colors.dark_yellow },
+        GitSignsChangeLn = { fg = colors.dark_yellow },
+        GitSignsDelete = { fg = colors.dark_red },
+        GitSignsDeleteNr = { fg = colors.dark_red },
+        GitSignsDeleteLn = { fg = colors.dark_red },
     },
 
     Telescope = {
-        TelescopePromptBorder = { fg = colors.cyan },
-        TelescopeResultsBorder = { fg = colors.purple },
-        TelescopePreviewBorder = { fg = colors.green },
-        TelescopeSelectionCaret = { fg = colors.purple },
-        TelescopeSelection = { fg = colors.purple },
-        TelescopeMatching = { fg = colors.cyan },
-        TelescopeNormal = { fg = colors.fg, bg = colors.float },
+        TelescopePromptBorder = { fg = colors.dark_cyan },
+        TelescopeResultsBorder = { fg = colors.dark_magenta },
+        TelescopePreviewBorder = { fg = colors.dark_green },
+        TelescopeSelectionCaret = { fg = colors.dark_magenta },
+        TelescopeSelection = { fg = colors.dark_magenta },
+        TelescopeMatching = { fg = colors.dark_cyan },
+        TelescopeNormal = { fg = colors.foreground, bg = colors.light_blue },
     },
 
     NvimTree = {
-        NvimTreeNormal = { fg = colors.fg, bg = colors.sidebar },
-        NvimTreeRootFolder = { fg = colors.blue, style = "bold" },
-        NvimTreeGitDirty = { fg = colors.yellow },
-        NvimTreeGitNew = { fg = colors.green },
-        NvimTreeImageFile = { fg = colors.yellow },
-        NvimTreeExecFile = { fg = colors.green },
-        NvimTreeSpecialFile = { fg = colors.purple, style = "underline" },
-        NvimTreeFolderName = { fg = colors.paleblue },
-        NvimTreeEmptyFolderName = { fg = colors.disabled },
-        NvimTreeFolderIcon = { fg = colors.accent },
-        NvimTreeIndentMarker = { fg = colors.disabled },
+        NvimTreeNormal = { fg = colors.foreground, bg = colors.dark_white },
+        NvimTreeRootFolder = { fg = colors.dark_blue, style = "bold" },
+        NvimTreeGitDirty = { fg = colors.dark_yellow },
+        NvimTreeGitNew = { fg = colors.dark_green },
+        NvimTreeImageFile = { fg = colors.dark_yellow },
+        NvimTreeExecFile = { fg = colors.dark_green },
+        NvimTreeSpecialFile = { fg = colors.dark_magenta, style = "underline" },
+        NvimTreeFolderName = { fg = colors.light_dark_blue },
+        NvimTreeEmptyFolderName = { fg = colors.dark_white },
+        NvimTreeFolderIcon = { fg = colors.light_blue },
+        NvimTreeIndentMarker = { fg = colors.dark_white },
 
         -- TODO not sure this goes here
-        LspDiagnosticsError = { fg = colors.error },
-        LspDiagnosticsWarning = { fg = colors.yellow },
-        LspDiagnosticsInformation = { fg = colors.paleblue },
-        LspDiagnosticsHint = { fg = colors.purple },
+        LspDiagnosticsError = { fg = colors.dark_red },
+        LspDiagnosticsWarning = { fg = colors.dark_yellow },
+        LspDiagnosticsInformation = { fg = colors.light_dark_blue },
+        LspDiagnosticsHint = { fg = colors.dark_magenta },
     },
 
     WhichKey = {
-        WhichKey = { fg = colors.accent, style = "bold" },
-        WhichKeyGroup = { fg = colors.text },
-        WhichKeyDesc = { fg = colors.blue, style = "italic" },
-        WhichKeySeperator = { fg = colors.fg },
-        WhichKeyFloating = { bg = colors.float },
-        WhichKeyFloat = { bg = colors.float },
+        WhichKey = { fg = colors.light_blue, style = "bold" },
+        WhichKeyGroup = { fg = colors.foreground },
+        WhichKeyDesc = { fg = colors.dark_blue, style = "italic" },
+        WhichKeySeperator = { fg = colors.foreground },
+        WhichKeyFloating = { bg = colors.light_blue },
+        WhichKeyFloat = { bg = colors.light_blue },
     },
 
     LspSaga = {
-        DiagnosticError = { fg = colors.error },
-        DiagnosticWarning = { fg = colors.yellow },
-        DiagnosticInformation = { fg = colors.paleblue },
-        DiagnosticHint = { fg = colors.purple },
-        DiagnosticTruncateLine = { fg = colors.fg },
-        LspFloatWinNormal = { bg = colors.bg },
-        LspFloatWinBorder = { fg = colors.purple },
-        LspSagaBorderTitle = { fg = colors.cyan },
-        LspSagaHoverBorder = { fg = colors.paleblue },
-        LspSagaRenameBorder = { fg = colors.green },
-        LspSagaDefPreviewBorder = { fg = colors.green },
-        LspSagaCodeActionBorder = { fg = colors.blue },
-        LspSagaFinderSelection = { fg = colors.green },
-        LspSagaCodeActionTitle = { fg = colors.paleblue },
-        LspSagaCodeActionContent = { fg = colors.purple },
-        LspSagaSignatureHelpBorder = { fg = colors.pink },
-        ReferencesCount = { fg = colors.purple },
-        DefinitionCount = { fg = colors.purple },
-        DefinitionIcon = { fg = colors.blue },
-        ReferencesIcon = { fg = colors.blue },
-        TargetWord = { fg = colors.cyan },
+        DiagnosticError = { fg = colors.dark_red },
+        DiagnosticWarning = { fg = colors.dark_yellow },
+        DiagnosticInformation = { fg = colors.light_dark_blue },
+        DiagnosticHint = { fg = colors.dark_magenta },
+        DiagnosticTruncateLine = { fg = colors.foreground },
+        LspFloatWinNormal = { bg = colors.dark_white },
+        LspFloatWinBorder = { fg = colors.dark_magenta },
+        LspSagaBorderTitle = { fg = colors.dark_cyan },
+        LspSagaHoverBorder = { fg = colors.light_dark_blue },
+        LspSagaRenameBorder = { fg = colors.dark_green },
+        LspSagaDefPreviewBorder = { fg = colors.dark_green },
+        LspSagaCodeActionBorder = { fg = colors.dark_blue },
+        LspSagaFinderdark_white = { fg = colors.dark_green },
+        LspSagaCodeActionTitle = { fg = colors.light_dark_blue },
+        LspSagaCodeActionContent = { fg = colors.dark_magenta },
+        LspSagaSignatureHelpBorder = { fg = colors.light_red },
+        ReferencesCount = { fg = colors.dark_magenta },
+        DefinitionCount = { fg = colors.dark_magenta },
+        DefinitionIcon = { fg = colors.dark_blue },
+        ReferencesIcon = { fg = colors.dark_blue },
+        TargetWord = { fg = colors.dark_cyan },
     },
 
     BufferLine = {
-        BufferLineIndicatorSelected = { fg = colors.accent },
-        BufferLineFill = { bg = colors.bg_alt },
+        BufferLineIndicatorSelected = { fg = colors.light_blue },
+        BufferLineFill = { bg = colors.dark_white_alt },
     },
 
     Sneak = {
-        Sneak = { fg = colors.bg, bg = colors.accent },
-        SneakScope = { bg = colors.selection },
+        Sneak = { fg = colors.dark_white, bg = colors.light_blue },
+        SneakScope = { bg = colors.dark_white },
     },
 
     IndentBlankline = {
-        IndentBlanklineChar = { fg = colors.indentline },
-        IndentBlanklineContextChar = { fg = colors.indentline },
+        IndentBlanklineChar = { fg = colors.dark_white },
+        IndentBlanklineContextChar = { fg = colors.dark_white },
     },
 
     NvimDap = {
-        DapBreakpoint = { fg = colors.red },
-        DapStopped = { fg = colors.green },
+        DapBreakpoint = { fg = colors.dark_red },
+        DapStopped = { fg = colors.dark_green },
     },
 
     DashboardNvim = {
-        DashboardCenter = { fg = colors.cyan },
-        DashboardFooter = { fg = colors.green, style = "italic" },
-        DashboardHeader = { fg = colors.red },
-        DashboardShortCut = { fg = colors.blue },
+        DashboardCenter = { fg = colors.dark_cyan },
+        DashboardFooter = { fg = colors.dark_green, style = "italic" },
+        DashboardHeader = { fg = colors.dark_red },
+        DashboardShortCut = { fg = colors.dark_blue },
     },
 }
 
 -- Options:
 
 if vim.g.seoul256_disable_background == true then
-    M.editor.Normal = { fg = colors.fg, bg = colors.none }
-    M.editor.SignColumn = { fg = colors.fg, bg = colors.none }
-    M.editor.NormalFloat = { fg = colors.fg, bg = colors.none }
-    M.editor.Pmenu = { fg = colors.text, bg = colors.none }
-    M.plugins.Telescope.TelescopeNormal = { fg = colors.fg, bg = colors.none }
+    M.editor.Normal = { fg = colors.foreground, bg = colors.none }
+    M.editor.SignColumn = { fg = colors.foreground, bg = colors.none }
+    M.editor.NormalFloat = { fg = colors.foreground, bg = colors.none }
+    M.editor.Pmenu = { fg = colors.foreground, bg = colors.none }
+    M.plugins.Telescope.TelescopeNormal = { fg = colors.foreground, bg = colors.none }
 end
 
 if vim.g.seoul256_italic_comments == true then
-    M.syntax.Comment = { fg = colors.green, bg = colors.none, style = "italic" }
-    M.treesitter.TSComment = { fg = colors.green, bg = colors.none, style = "italic" }
+    M.syntax.Comment = { fg = colors.dark_green, bg = colors.none, style = "italic" }
+    M.treesitter.TSComment = { fg = colors.dark_green, bg = colors.none, style = "italic" }
 end
 
 if vim.g.seoul256_italic_keywords == true then
-    M.syntax.Conditional = { fg = colors.purple, bg = colors.none, style = "italic" }
-    M.syntax.Keyword = { fg = colors.purple, bg = colors.none, style = "italic" }
-    M.syntax.Repeat = { fg = colors.purple, bg = colors.none, style = "italic" }
-    M.treesitter.TSConditional = { fg = colors.purple, style = "italic" }
-    M.treesitter.TSKeyword = { fg = colors.purple, style = "italic" }
-    M.treesitter.TSRepeat = { fg = colors.purple, style = "italic" }
-    M.treesitter.TSKeywordFunction = { fg = colors.purple, style = "italic" }
+    M.syntax.Conditional = { fg = colors.dark_magenta, bg = colors.none, style = "italic" }
+    M.syntax.Keyword = { fg = colors.dark_magenta, bg = colors.none, style = "italic" }
+    M.syntax.Repeat = { fg = colors.dark_magenta, bg = colors.none, style = "italic" }
+    M.treesitter.TSConditional = { fg = colors.dark_magenta, style = "italic" }
+    M.treesitter.TSKeyword = { fg = colors.dark_magenta, style = "italic" }
+    M.treesitter.TSRepeat = { fg = colors.dark_magenta, style = "italic" }
+    M.treesitter.TSKeywordFunction = { fg = colors.dark_magenta, style = "italic" }
 end
 
 if vim.g.seoul256_italic_functions == true then
-    M.syntax.Function = { fg = colors.blue, bg = colors.none, style = "italic" }
-    M.treesitter.TSFunction = { fg = colors.blue, style = "italic" }
-    M.treesitter.TSMethod = { fg = colors.blue, style = "italic" }
-    M.treesitter.TSFuncBuiltin = { fg = colors.cyan, style = "italic" }
+    M.syntax.Function = { fg = colors.dark_blue, bg = colors.none, style = "italic" }
+    M.treesitter.TSFunction = { fg = colors.dark_blue, style = "italic" }
+    M.treesitter.TSMethod = { fg = colors.dark_blue, style = "italic" }
+    M.treesitter.TSFuncBuiltin = { fg = colors.dark_cyan, style = "italic" }
 end
 
 if vim.g.seoul256_italic_variables == true then
-    M.syntax.Identifier = { fg = colors.pink, bg = colors.none, style = "italic" }
-    M.treesitter.TSVariable = { fg = colors.gray, style = "italic" }
-    M.treesitter.TSVariableBuiltin = { fg = colors.gray, style = "italic" }
+    M.syntax.Identifier = { fg = colors.light_red, bg = colors.none, style = "italic" }
+    M.treesitter.TSVariable = { fg = colors.light_black, style = "italic" }
+    M.treesitter.TSVariableBuiltin = { fg = colors.light_black, style = "italic" }
 end
 
 if vim.g.seoul256_borders == true then
-    M.editor.VertSplit = { fg = colors.border }
+    M.editor.VertSplit = { fg = colors.dark_white }
 end
 
 if vim.g.seoul256_hl_current_line == true then
-    M.editor.CursorLine = { fg = colors.none, bg = colors.active }
+    M.editor.CursorLine = { fg = colors.none, bg = colors.light_black }
 end
 
 return M
