@@ -2,12 +2,9 @@ local keymap = vim.keymap
 local utils = require("utils")
 local g = vim.g
 
--- keymap.set("i", "#", "X<C-v><C-h>#", { desc = "Don't remove indentation on line starting with #" })
-
 -- Spacebar is <Leader>
-keymap.set("", "<Space>", "<Nop>", { silent = true })
-g.mapleader = " "
-g.maplocalleader = " "
+g.mapleader = ","
+g.maplocalleader = ","
 
 -- Fast save, save quit, force exit
 keymap.set("n", "<Leader>w", ":w!<CR>", { desc = "Write!" })

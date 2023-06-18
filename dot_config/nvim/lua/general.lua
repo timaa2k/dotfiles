@@ -7,12 +7,13 @@ cmd('syntax enable')
 
 o.mouse = 'a'                                                -- Enable mouse support in all modes
 o.number = true                                              -- Show line numbers
-o.relativenumber = true                                      -- Relative line numbers
+o.relativenumber = false                                     -- Do not set relative line numbers
 o.modelines = 0                                              -- Turn off modelines
 o.cursorline = true                                          -- Highlight current line
-o.list = true                                                -- Display whitespace chars
+o.list = false                                               -- Do not display whitespace chars
 o.listchars = 'tab:...,trail:_,extends:>,precedes:<,nbsp:~'  -- Format of list
 o.wrap = true                                                -- Wrap lines on small screen
+o.wrapscan = true                                            -- Wrap search around the file
 o.whichwrap = 'b,s,<,>,h,l,[,]'                              -- Able to move line using these keys
 o.backspace = 'indent,eol,start'                             -- Fixes common backspace problem
 o.scrolloff = 5                                              -- Display 5 lines above/below the cursor when scrolling
@@ -24,7 +25,7 @@ o.ignorecase = true                                          -- Ignore case whil
 o.smartcase = true                                           -- Override ignorecase if using uppercase words
 o.history = 1000                                             -- History lines to be remembered
 o.wildmenu = true                                            -- Better commandline completion
-o.cmdheight = 2                                              -- Height of commandline bar
+o.cmdheight = 1                                              -- Height of commandline bar
 o.hidden = true                                              -- Hide current buffer when opening new file to new buffer
 o.backup = false                                             -- Disable creating backup file
 o.writebackup = false                                        -- Disable creating backup file
@@ -36,13 +37,20 @@ o.splitbelow = true                                          -- Open new split b
 o.splitright = true                                          -- Open new vertical split on the right
 o.expandtab = true                                           -- Tabs are spaces
 o.smarttab = true                                            -- Smarter tabs
-o.shiftwidth = 2                                             -- 1 tab is 2 spaces
-o.tabstop = 2                                                -- 1 tab is 2 spaces
+o.shiftwidth = 4                                             -- 1 tab is 2 spaces
+o.tabstop = 4                                                -- 1 tab is 4 spaces
+o.softtabstop = 4                                            --
 o.autoindent = true                                          -- Copy indentation from previous line when starting new line
 o.cindent = true                                             -- Copy indentation from file being edited
 o.clipboard = 'unnamedplus'                                  -- Use unnamedplus register
 o.spell = true                                               -- Enable spelling
 o.spelllang = 'en_us'                                        -- Spelling language
+o.showcmd = true                                             --
+o.ruler = true                                               --
+o.updatetime = 300                                           --
+o.ttimeout = true                                            --
+o.ttimeoutlen = 100                                          --
+o.timeoutlen = 3000                                          --
 
 -- Temporary undodir
 local undodir = '/tmp/.vim-undodir-' .. vim.env.USER
