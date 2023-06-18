@@ -3,38 +3,19 @@ require('lualine').setup {
     globalstatus = true,
     icons_enabled = true,
     theme = 'seoul256',
-    section_separators = { left = '', right = '' },
+    section_separators = { left = '', right = '' },
     component_separators = '',
     disabled_filetypes = { 'oil' },
   },
-  sections = {
+  tabline = {
     lualine_a = {
       {
         'mode',
-        separator = { left = '', right = '' },
+        separator = { left = '', right = '' },
       }
     },
-    lualine_b = {
-      {
-        'branch',
-        separator = { left = '', right = '' },
-      }
-    },
+    lualine_b = {},
     lualine_c = {
-      {
-        'diff',
-        symbols = {
-          added = ' ',
-          modified = ' ',
-          removed = ' ',
-        },
-      },
-      {
-        'diagnostics',
-        sources = {
-          'nvim_diagnostic'
-        }
-      },
       {
         'filename',
         path = 1,
@@ -46,20 +27,21 @@ require('lualine').setup {
         }
       }
     },
-    lualine_x = { 'filetype' },
+    lualine_x = {},
     lualine_y = { 'progress' },
     lualine_z = {
       {
         'location',
-        separator = { left = '', right = '' },
+        separator = { left = '', right = '' },
       }
     }
   },
-  tabline = {
+  sections = {
+    lualine_a = {},
     lualine_b = {
       {
         'buffers',
-        separator = { left = '', right = '' },
+        separator = { left = '', right = '' },
         show_modified_status = false,
         buffers_color = {
           active = 'lualine_b_normal',
@@ -67,11 +49,28 @@ require('lualine').setup {
         },
       }
     },
-    lualine_z = {
+    lualine_c = {},
+    lualine_x = {
       {
-      'hostname',
-        separator = { left = '', right = '' },
+        'branch',
+        separator = { left = '', right = '' },
+      },
+      {
+        'diff',
+        symbols = {
+          added = '+',
+          modified = '~',
+          removed = '-',
+        },
+      },
+      {
+        'diagnostics',
+        sources = {
+          'nvim_diagnostic'
+        }
       }
-    }
+    },
+    lualine_y = {},
+    lualine_z = {}
   },
 }
