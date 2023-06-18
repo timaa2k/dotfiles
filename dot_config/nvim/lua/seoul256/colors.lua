@@ -21,6 +21,8 @@ local colors = {
     light_white     = "#cccccc",
 
     extra_white     = "#d9d9d9",
+    extra_orange    = "#de935f",
+    extra_yellow    = "#d8af5f",
 
     none = "NONE",
 }
