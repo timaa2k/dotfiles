@@ -48,6 +48,8 @@
 {
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
+  nixpkgs.config.allowUnfree = true;
+
   services.nix-daemon.enable = true;
 
   environment.systemPackages = with pkgs; [
