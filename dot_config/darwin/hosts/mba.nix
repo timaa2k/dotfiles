@@ -76,6 +76,8 @@
     lua
     nodejs
     go
+    qemu
+    libvirt
   ];
 
   programs.bash.enable = true;
