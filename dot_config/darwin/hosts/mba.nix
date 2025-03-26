@@ -53,7 +53,7 @@
   services.nix-daemon.enable = true;
 
   environment.systemPackages = with pkgs; [
-    youtube-dl
+    bat
     kitty
     tmux
     fzf
@@ -61,6 +61,7 @@
     curl
     findutils
     coreutils
+    diffutils
     less
     jq
     yq
@@ -75,9 +76,12 @@
     fd
     lua
     nodejs
-    go
     qemu
     libvirt
+    xz
+    buildozer
+    ncdu
+    youtube-dl
   ];
 
   programs.bash.enable = true;

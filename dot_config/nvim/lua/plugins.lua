@@ -152,12 +152,12 @@ lazy.setup(
         require('configs._oil')
       end
     },
-    {
-      'lewis6991/gitsigns.nvim',
-      config = function()
-        require('configs._gitsigns')
-      end
-    },
+    -- {
+    --   'lewis6991/gitsigns.nvim',
+    --   config = function()
+    --     require('configs._gitsigns')
+    --   end
+    -- },
 
     -- Editing support
     {

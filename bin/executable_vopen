@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+fzf --border --bind 'enter:become(vim {})'
