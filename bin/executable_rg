@@ -1,0 +1,31 @@
+#!/usr/bin/env dotslash
+
+{
+    "name": "rg",
+    "platforms": {
+        "macos-aarch64": {
+            "size": 2082672,
+            "hash": "sha256",
+            "digest": "fc87e78f7cb3fea12d69072e7ef3b21509754717b746368fd40d88963630e2b3",
+            "format": "tar.gz",
+            "path": "ripgrep-14.1.1-x86_64-apple-darwin/rg",
+            "providers": [
+                {
+                    "url": "https://github.com/BurntSushi/ripgrep/releases/download/14.1.1/ripgrep-14.1.1-x86_64-apple-darwin.tar.gz"
+                }
+            ]
+        },
+        "linux-x86_64": {
+            "size": 2566310,
+            "hash": "sha256",
+            "digest": "4cf9f2741e6c465ffdb7c26f38056a59e2a2544b51f7cc128ef28337eeae4d8e",
+            "format": "tar.gz",
+            "path": "ripgrep-14.1.1-x86_64-unknown-linux-musl/rg",
+            "providers": [
+                {
+                    "url": "https://github.com/BurntSushi/ripgrep/releases/download/14.1.1/ripgrep-14.1.1-x86_64-unknown-linux-musl.tar.gz",
+                }
+            ]
+        }
+    }
+}

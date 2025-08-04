@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+open_editor=vim
+
+if [ -n "${EDITOR+x}" ]; then
+  open_editor="$EDITOR"
+fi
+
+if [ -n "${VSCODE_NONCE+x}" ]; then
+  open_editor=code
+fi
+
+origin="${PWD}"
+
+if git rev-parse --git-dir > /dev/null 2>&1; then
+  origin="$(git rev-parse --show-toplevel)"
+fi
+
+INITIAL_QUERY="${*:-}"
+
+fd --type f -H -E .git . "${origin}" | fzf \
+  --query "${INITIAL_QUERY}" \
+  --height 40% \
+  --border \
+  --bind "enter:become(${open_editor} {})"

@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+open_editor=vim
+
+if [ -n "${EDITOR+x}" ]; then
+  open_editor="$EDITOR"
+fi
+
+if [ -n "${VSCODE_NONCE+x}" ]; then
+  open_editor=code
+fi
+
+RG_PREFIX="fd --type f -H -E .git . | xargs rg --column --line-number --no-heading --smart-case "
+INITIAL_QUERY="${*:-}"
+fzf \
+  --ansi \
+  --disabled \
+  --query "$INITIAL_QUERY" \
+  --bind "start:reload:$RG_PREFIX {q}" \
+  --bind "change:reload:sleep 0.1; $RG_PREFIX {q} || true" \
+  --delimiter : \
+  --preview 'bat --color=always {1} --highlight-line {2}' \
+  --preview-window 'up,65%,border-bottom,+{2}+3/3,~3' \
+  --bind "enter:become(${open_editor} {})"

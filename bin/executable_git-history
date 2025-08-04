@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+if ! git rev-parse --git-dir > /dev/null 2>&1; then
+  echo "Not a git directory."
+  exit 1
+fi
+
+git log \
+  --date=short \
+  --format="%C(auto)%cd %h%d %s (%an)" \
+  --graph \
+  --color=always \
+| fzf \
+  --height 100% \
+  --border \
+  --ansi \
+  --no-sort \
+  --multi \
+  --bind 'ctrl-s:toggle-sort' \
+  --header 'Press CTRL-S to toggle sort' \
+  --preview 'grep -o "[a-f0-9]\{7,\}" <<< {} | xargs git show --color=always | head -'$LINES \
+  "$@" \
+| grep -o "[a-f0-9]\{7,\}"

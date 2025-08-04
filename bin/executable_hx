@@ -1,0 +1,31 @@
+#!/usr/bin/env dotslash
+
+{
+    "name": "hx",
+    "platforms": {
+        "macos-aarch64": {
+            "size": 16686080,
+            "hash": "sha256",
+            "digest": "00b1651b4fdbbe0a2ae981c8e76b858bd26a7c33f5b3583f3b6bb9137d54f1ff",
+            "format": "tar.xz",
+            "path": "helix-25.07.1-aarch64-macos/hx",
+            "providers": [
+                {
+                    "url": "https://github.com/helix-editor/helix/releases/download/25.07.1/helix-25.07.1-aarch64-macos.tar.xz"
+                }
+            ]
+        },
+        "linux-x86_64": {
+            "size": 16636076,
+            "hash": "sha256",
+            "digest": "3f08e63ecd388fff657ad39722f88bb03dcf326f1f2da2700d99e1dc40ab2e8b",
+            "format": "tar.xz",
+            "path": "helix-25.07.1-x86_64-linux/hx",
+            "providers": [
+                {
+                    "url": "https://github.com/helix-editor/helix/releases/download/25.07.1/helix-25.07.1-x86_64-linux.tar.xz"
+                }
+            ]
+        }
+    }
+}
