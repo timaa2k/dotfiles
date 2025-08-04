@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+
+# Script for downloading the dotslash tool on-demand.
+# https://dotslash-cli.com/docs/motivation/
+
+dotslash_version="0.5.7"
+
+if [ "$(uname)" == "Darwin" ]; then
+    dotslash_url="https://github.com/facebook/dotslash/releases/download/v${dotslash_version}/dotslash-macos.v${dotslash_version}.tar.gz"
+    dotslash_sha256="94c33799c09613abe96ffd64e1789ba650cb81070a11d5cc24b05f131ab088b3"
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    dotslash_url="https://github.com/facebook/dotslash/releases/download/v${dotslash_version}/dotslash-linux-musl.x86_64.v${dotslash_version}.tar.gz"
+    dotslash_sha256="4a27ed52115859131c538b604ffbb7dc838f1497a3041b5eeb1db08e2939c1ad"
+else
+    echo "Operating system not supported." >&2
+    echo "$(uname)" >&2
+    exit 1
+fi
+
+script_dir=$(cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd)
+real_dotslash="${script_dir}/ds"
+
+if ! command -v curl &>/dev/null; then
+  echo "Required executable curl was not found." >&2
+  exit 1
+elif ! command -v sha256sum &>/dev/null; then
+  echo "Required executable sha256sum was not found." >&2
+  exit 1
+fi
+
+if ! [[ -f "${real_dotslash}" ]] || ! echo "${dotslash_sha256} ${real_dotslash}" | sha256sum --check --status; then
+  tmp_dir=$(mktemp -d)
+  trap "rm -rf ${tmp_dir}" EXIT
+
+  dotslash_archive="${tmp_dir}/dotslash.tar.gz"
+
+  if ! error=$(curl -fL "${dotslash_url}" -o "${dotslash_archive}" 2>&1); then
+    echo "Downloading dotslash failed: ${dotslash_url}" >&2
+    echo "${error}" >&2
+    exit 1
+  fi
+
+  if ! error=$(tar xzf ${dotslash_archive} -C "${tmp_dir}" 2>&1); then
+    echo "Unpacking dotslash failed: ${dotslash_archive}" >&2
+    echo "${error}" >&2
+    exit 1
+  fi
+
+  mv "${tmp_dir}/dotslash" "${real_dotslash}"
+  rm -rf "${tmp_dir}"
+  chmod +x "${real_dotslash}"
+fi
+
+exec "${real_dotslash}" "$@"

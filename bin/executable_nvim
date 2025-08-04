@@ -1,0 +1,31 @@
+#!/usr/bin/env dotslash
+
+{
+    "name": "nvim",
+    "platforms": {
+        "macos-aarch64": {
+            "size": 9180192,
+            "hash": "blake3",
+            "digest": "90c6560ae5281ccdb9cc0f3fa38ba3572d7b4c5f85bd048b0d8481b7b25c8015",
+            "format": "tar.gz",
+            "path": "nvim-macos-arm64/bin/nvim",
+            "providers": [
+                {
+                    "url": "https://github.com/neovim/neovim/releases/download/v0.11.3/nvim-macos-arm64.tar.gz"
+                }
+            ]
+        },
+        "linux-x86_64": {
+            "size": 10941468,
+            "hash": "blake3",
+            "digest": "2028f31e20dd8e50399dc80da13b0ef626b7db83885f65098726626aa44d174b",
+            "format": "tar.gz",
+            "path": "nvim-linux-x86_64/bin/nvim",
+            "providers": [
+                {
+                    "url": "https://github.com/neovim/neovim/releases/download/v0.11.3/nvim-linux-x86_64.tar.gz"
+                }
+            ]
+        }
+    }
+}
