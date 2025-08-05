@@ -1,0 +1,31 @@
+#!/usr/bin/env dotslash
+
+{
+    "name": "ollama",
+    "platforms": {
+        "macos-aarch64": {
+            "size": 23606198,
+            "hash": "sha256",
+            "digest": "acb48434bcbf7f6e61daf752fed886e285184c228362585320a2e0eb8f1d0a1e",
+            "format": "tar.gz",
+            "path": "ollama",
+            "providers": [
+                {
+                    "url": "https://github.com/ollama/ollama/releases/download/v0.10.1/ollama-darwin.tgz"
+                }
+            ]
+        },
+        "linux-x86_64": {
+            "size": 1311616378,
+            "hash": "sha256",
+            "digest": "e65d65a7f2b471bdb4d213cc3ce304de992c36c39458d5303648318a92f4d4af",
+            "format": "tar.gz",
+            "path": "bin/ollama",
+            "providers": [
+                {
+                    "url": "https://github.com/ollama/ollama/releases/download/v0.10.1/ollama-linux-amd64.tgz"
+                }
+            ]
+        }
+    }
+}
