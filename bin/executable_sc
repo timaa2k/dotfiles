@@ -1,0 +1,31 @@
+#!/usr/bin/env dotslash
+
+{
+    "name": "sc",
+    "platforms": {
+        "macos-aarch64": {
+            "size": 2211547,
+            "hash": "sha256",
+            "digest": "4cba09eca5fd92ed52f12d19af1fd1afaf5e4d3208bc1760183ba99558e9d8d3",
+            "format": "tar.gz",
+            "path": "sc--x86_64-apple-darwin/sc",
+            "providers": [
+                {
+                    "url": "https://github.com/efugier/smartcat/releases/download/2.2.0/sc--x86_64-apple-darwin.tar.gz"
+                }
+            ]
+        },
+        "linux-x86_64": {
+            "size": 2322540,
+            "hash": "sha256",
+            "digest": "e0b751dbd4dc11f61a138a222b415cfa6870d13c785e98ebee12177a75a3ff78",
+            "format": "tar.gz",
+            "path": "sc--x86_64-unknown-linux-gnu/sc",
+            "providers": [
+                {
+                    "url": "https://github.com/efugier/smartcat/releases/download/2.2.0/sc--x86_64-unknown-linux-gnu.tar.gz"
+                }
+            ]
+        }
+    }
+}

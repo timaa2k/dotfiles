@@ -41,6 +41,9 @@ export FZF_DEFAULT_OPTS="--height 80% --color=light"
 export BAT_STYLE=changes,header,numbers,snip
 export BAT_THEME=base16
 
+export AICHAT_CONFIG_DIR="${HOME}/.config/aichat"
+export AICHAT_ENV_FILE="${HOME}/.env"
+
 
 # Source configuration:
 
