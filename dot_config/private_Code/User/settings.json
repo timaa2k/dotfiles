@@ -1,10 +1,21 @@
 {
     "window.zoomLevel": 1,
     "editor.minimap.enabled": false,
-    "workbench.sideBar.location": "right",
+    "workbench.sideBar.location": "left",
     "workbench.colorTheme": "Seoul Light",
     "workbench.activityBar.visible": true,
+    "workbench.activityBar.location": "top",
     "workbench.statusBar.visible": true,
+    "workbench.startupEditor": "none",
+    "workbench.welcomePage.walkthroughs.openOnInstall": false,
+    "workbench.panel.opensMaximized": "preserve",
+    "window.newWindowDimensions": "maximized",
+    "window.openFoldersInNewWindow": "on",
+    "window.openFilesInNewWindow": "off",
+    "window.restoreWindows": "preserve",
+    "explorer.autoReveal": false,
+    "explorer.sortOrder": "mixed",
+    "search.mode": "reuseEditor",
     "files.autoSave": "onWindowChange",
     "editor.fontFamily": "'Hack', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "workbench.preferredDarkColorTheme": "Smyck",
@@ -55,9 +66,12 @@
     "breadcrumbs.symbolPath": "off",
     "workbench.editor.tabSizing": "shrink",
     "workbench.editor.showIcons": false,
-    "workbench.editor.tabCloseButton": "off",
+    "workbench.editor.tabCloseButton": "on",
     "workbench.editor.revealIfOpen": true,
     "debug.showInlineBreakpointCandidates": false,
     "editor.fontLigatures": null,
-    "breadcrumbs.enabled": false
+    "breadcrumbs.enabled": false,
+    "workbench.colorCustomizations": {
+        "tab.activeForeground": "#616161",
+    }
 }
