@@ -28,7 +28,7 @@ elif ! command -v sha256sum &>/dev/null; then
   exit 1
 fi
 
-if ! [[ -f "${real_dotslash}" ]] || ! echo "${dotslash_sha256} ${real_dotslash}" | sha256sum --check --status; then
+if ! [[ -f "${real_dotslash}" ]] || ! echo "${dotslash_sha256} ${real_dotslash}" | sha256sum --status -c -; then
   tmp_dir=$(mktemp -d)
   trap "rm -rf ${tmp_dir}" EXIT
 
