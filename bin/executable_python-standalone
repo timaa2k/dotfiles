@@ -1,0 +1,31 @@
+#!/usr/bin/env dotslash
+
+{
+    "name": "python-standalone",
+    "platforms": {
+        "macos-aarch64": {
+            "size": 46813460,
+            "hash": "sha256",
+            "digest": "03f26b105443c70e594c2eebf2439a07d04a23543bf1016ac819b6a021e501a2",
+            "format": "tar.zst",
+            "path": "python/install/bin/python3",
+            "providers": [
+                {
+                    "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20250723/cpython-3.12.11+20250723-aarch64-apple-darwin-pgo+lto-full.tar.zst"
+                }
+            ]
+        },
+        "linux-x86_64": {
+            "size": 79622179,
+            "hash": "sha256",
+            "digest": "963624f83ae8da4eb6bdc5907c15d67bbcbaf41918c2999ba861cacb7bc0f104",
+            "format": "tar.zst",
+            "path": "uv-x86_64-unknown-linux-musl/uvx",
+            "providers": [
+                {
+                    "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20250723/cpython-3.12.11+20250723-x86_64-unknown-linux-musl-lto+static-full.tar.zst"
+                }
+            ]
+        }
+    }
+}

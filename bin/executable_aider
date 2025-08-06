@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+UV_PYTHON=$(dotslash -- fetch $(which python-standalone)) uvx \
+  --no-progress \
+  --exclude-newer 2025-08-06T14:26:18Z \
+  --from aider-chat \
+  aider
