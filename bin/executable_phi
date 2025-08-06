@@ -1,6 +1,3 @@
 #!/usr/bin/env bash
 
-exec sc \
-  --api=ollama \
-  --model="phi3:mini" \
-  "$@"
+exec ollama-sc "phi3:mini" "$@"

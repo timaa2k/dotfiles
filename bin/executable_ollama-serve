@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+OLLAMA_CONTEXT_LENGTH=8192 ollama serve

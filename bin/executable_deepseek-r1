@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+exec ollama-sc "deepseek-r1:8b" "$@"

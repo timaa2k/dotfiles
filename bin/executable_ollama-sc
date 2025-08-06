@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+ 
+model="$1"
+
+shift
+ 
+if ! ollama list | grep -q "${model}"; then
+  ollama pull "${model}"
+fi
+
+exec sc \
+  --api=ollama \
+  --model="${model}" \
+  "$@"

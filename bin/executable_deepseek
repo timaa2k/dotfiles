@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-exec sc \
-  --api=ollama \
-  --model="deepseek-r1:8b" \
-  "$@"
