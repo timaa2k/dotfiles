@@ -23,6 +23,11 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+vim.cmd [[
+  highlight IblIndent guifg=#cccccc gui=nocombine
+  highlight IblWhitespace guifg=#FFFFFF gui=nocombine
+]]
+
 local lazy = require('lazy')
 
 lazy.setup(
@@ -60,8 +65,12 @@ lazy.setup(
     },
     {
       'lukas-reineke/indent-blankline.nvim',
+      main = "ibl",
+      ---@module "ibl"
+      ---@type ibl.config
+      opts = {},
       config = function()
-        require('indent_blankline').setup()
+        require('ibl').setup()
       end
     },
     -- LSP
@@ -73,7 +82,6 @@ lazy.setup(
         'lewis6991/gitsigns.nvim',
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig',
-        'jose-elias-alvarez/null-ls.nvim',
         'nvim-lua/plenary.nvim',
         'WhoIsSethDaniel/mason-tool-installer.nvim',
       },
@@ -83,6 +91,8 @@ lazy.setup(
     },
     {
       'nvim-treesitter/nvim-treesitter',
+      branch = 'master',
+      lazy = false, 
       build = ':TSUpdate',
       config = function()
         require('configs._treesitter')
@@ -90,33 +100,11 @@ lazy.setup(
     },
 
     -- Autocompletion
-    -- {
-    --   'hrsh7th/nvim-cmp',
-    --   dependencies = {
-    --     'hrsh7th/cmp-nvim-lsp',
-    --     'hrsh7th/cmp-buffer',
-    --     'hrsh7th/cmp-path',
-    --     'f3fora/cmp-spell',
-    --     'saadparwaiz1/cmp_luasnip',
-    --     'onsails/lspkind-nvim',
-    --   },
-    --   config = function()
-    --     require('configs._nvim-cmp')
-    --   end
-    -- },
-    -- {
-    --   'L3MON4D3/LuaSnip',
-    --   build = 'make install_jsregexp',
-    --   dependencies = {
-    --     'rafamadriz/friendly-snippets',
-    --     'budimanjojo/k8s-snippets'
-    --   },
-    -- },
 
     {
       'folke/trouble.nvim',
-      lazy = true,
-      event = 'BufReadPost',
+      opts = {},
+      cmd = 'Trouble',
       config = function()
         require('trouble').setup()
       end
