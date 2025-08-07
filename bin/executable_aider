@@ -6,4 +6,4 @@ exec uv tool run \
   --no-progress \
   --exclude-newer 2025-08-06T14:26:18Z \
   --from aider-chat \
-  aider "$@"
+-- aider "$@"
