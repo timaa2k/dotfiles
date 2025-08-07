@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
 exec uv tool run \
+  --quiet \
   --python=3.12 \
   --no-progress \
+  --prerelease=allow \
   --exclude-newer 2025-08-06T14:26:18Z \
-  --from aider-chat \
-  aider
+  --from azure-cli@2.76.0 \
+  az \
+    --only-show-errors
