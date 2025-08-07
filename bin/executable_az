@@ -7,5 +7,4 @@ exec uv tool run \
   --prerelease=allow \
   --exclude-newer 2025-08-06T14:26:18Z \
   --from azure-cli@2.76.0 \
-  az \
-    --only-show-errors
+  az --only-show-errors "$@"
