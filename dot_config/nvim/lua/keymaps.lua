@@ -1,5 +1,4 @@
 local keymap = vim.keymap
-local utils = require("utils")
 local g = vim.g
 
 -- Spacebar is <Leader>
@@ -95,15 +94,6 @@ keymap.set("n", "<Leader>fd", ":FzfLua lsp_typedefs<CR>")
 -- Trouble
 keymap.set("n", "<Leader>xx", ":TroubleToggle<CR>")
 keymap.set("n", "<Leader>xr", ":TroubleToggle lsp_references<CR>")
-
--- oil.nvim
-keymap.set("n", "<C-f>", function()
-  if vim.api.nvim_buf_get_option(vim.api.nvim_win_get_buf(0), "filetype") == "oil" then
-    return require("oil").close()
-  else
-    return require("oil").open_float(utils.current_path())
-  end
-end, { desc = "Toggle Oil filemanager" })
 
 -- null-ls
 if vim.fn.has("nvim-0.8") == 1 then

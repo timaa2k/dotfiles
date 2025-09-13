@@ -33,47 +33,16 @@ local lazy = require('lazy')
 lazy.setup(
 -- Plugins
   {
-    -- Syntax highlighting
-    'pearofducks/ansible-vim',
-    'alker0/chezmoi.vim',
     {
-      'norcalli/nvim-colorizer.lua',
+      'nvim-treesitter/nvim-treesitter',
+      branch = 'master',
+      lazy = false, 
+      build = ':TSUpdate',
       config = function()
-        require('colorizer').setup()
+        require('configs._treesitter')
       end
     },
 
-    -- Appearance
-    --{
-    --  'folke/tokyonight.nvim',
-    --  lazy = false,
-    --  priority = 1000,
-    --  config = function()
-    --    require('tokyonight').setup {
-    --      style = 'night',
-    --    }
-    --    vim.cmd('colorscheme tokyonight')
-    --  end
-    --},
-    'stevearc/dressing.nvim',
-    {
-      'nvim-lualine/lualine.nvim',
-      dependencies = { 'kyazdani42/nvim-web-devicons' },
-      config = function()
-        require('configs._lualine')
-      end
-    },
-    {
-      'lukas-reineke/indent-blankline.nvim',
-      main = "ibl",
-      ---@module "ibl"
-      ---@type ibl.config
-      opts = {},
-      config = function()
-        require('ibl').setup()
-      end
-    },
-    -- LSP
     {
       'neovim/nvim-lspconfig',
       dependencies = {
@@ -89,85 +58,43 @@ lazy.setup(
         require('configs._lspconfig')
       end
     },
-    {
-      'nvim-treesitter/nvim-treesitter',
-      branch = 'master',
-      lazy = false, 
-      build = ':TSUpdate',
-      config = function()
-        require('configs._treesitter')
-      end
-    },
-
-    -- Autocompletion
 
     {
-      'folke/trouble.nvim',
-      opts = {},
-      cmd = 'Trouble',
-      config = function()
-        require('trouble').setup()
-      end
-    },
-    {
-      'windwp/nvim-ts-autotag',
-      config = function()
-        require('nvim-ts-autotag').setup()
-      end
-    },
-
-    -- Fuzzy finder
-    {
-      'ibhagwan/fzf-lua',
+      'nvim-lualine/lualine.nvim',
       dependencies = { 'kyazdani42/nvim-web-devicons' },
       config = function()
-        require('configs._fzf-lua')
-      end
-    },
-    {
-      'phaazon/hop.nvim',
-      branch = 'v2',
-      config = function()
-        require('hop').setup()
-      end
-    },
-    {
-      'ray-x/sad.nvim',
-      dependencies = { 'ray-x/guihua.lua', build = 'cd lua/fzy && make' },
-      config = function()
-        require('configs._sad-nvim')
+        require('configs._lualine')
       end
     },
 
-    -- {
-    --   'lewis6991/gitsigns.nvim',
-    --   config = function()
-    --     require('configs._gitsigns')
-    --   end
-    -- },
+    {
+      'norcalli/nvim-colorizer.lua',
+      config = function()
+        require('colorizer').setup()
+      end
+    },
 
-    -- Editing support
     {
       'numToStr/Comment.nvim',
       config = function()
         require('Comment').setup()
       end
     },
+
     {
       'windwp/nvim-autopairs',
       config = function()
         require('configs._autopairs')
       end
     },
+
     {
       'kylechui/nvim-surround',
       config = function()
         require('nvim-surround').setup()
       end
     },
-    'taybart/b64.nvim',
 
-    -- Braindead doctor
     {
       'folke/which-key.nvim',
       config = function()
@@ -175,8 +102,6 @@ lazy.setup(
       end
     },
 
-    -- Other
-    'andweeb/presence.nvim',
   },
 -- Configurations
   {

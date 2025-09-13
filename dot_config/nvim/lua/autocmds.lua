@@ -62,20 +62,3 @@ api.nvim_create_autocmd({ 'FileType' }, {
   end,
   group = ftconfiguration
 })
-
--- ChoiceNode popup in snippet
-local choicepopup = api.nvim_create_augroup('choicepopup', { clear = true })
-api.nvim_create_autocmd('User', {
-  pattern = { 'LuasnipChoiceNodeEnter', 'LuasnipChoiceNodeLeave', 'LuasnipChangeChoice' },
-  callback = function(arg)
-    local match = arg.match
-    if match == 'LuasnipChoiceNodeEnter' then
-      require('utils').choice_popup(require('luasnip').session.event_node)
-    elseif match == 'LuasnipChoiceNodeLeave' then
-      require('utils').choice_popup_close()
-    elseif match == 'LuasnipChangeChoice' then
-      require('utils').update_choice_popup(require('luasnip').session.event_node)
-    end
-  end,
-  group = choicepopup
-})
