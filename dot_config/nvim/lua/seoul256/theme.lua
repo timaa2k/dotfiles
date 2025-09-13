@@ -40,6 +40,7 @@ M.syntax = {
     Type = { fg = colors.light_magenta, bg = colors.none },
     Typedef = { fg = colors.light_magenta, bg = colors.none },
     Underlined = { fg = colors.none, bg = colors.none, style = "underline" },
+    WinSeparator = { fg = colors.light_white, bg = colors.none },
 }
 
 -- Editor highlight groups
@@ -121,7 +122,7 @@ M.treesitter = {
     TSConstBuiltin = { fg = colors.dark_blue },
     TSConstMacro = { fg = colors.dark_blue },
     TSConstant = { fg = colors.dark_yellow },
-    TSConstructor = { fg = colors.dark_magenta },
+    TSConstructor = { fg = colors.light_blue },
     TSDanger = {}, -- TODO
     TSEmphasis = { fg = colors.dark_blue },
     TSEnvironment = {}, -- TODO
@@ -252,13 +253,15 @@ M.plugins = {
     },
 
     Telescope = {
-        TelescopePromptBorder = { fg = colors.dark_cyan },
-        TelescopeResultsBorder = { fg = colors.dark_magenta },
-        TelescopePreviewBorder = { fg = colors.dark_green },
-        TelescopeSelectionCaret = { fg = colors.dark_magenta },
-        TelescopeSelection = { fg = colors.dark_magenta },
-        TelescopeMatching = { fg = colors.dark_cyan },
-        TelescopeNormal = { fg = colors.foreground, bg = colors.light_blue },
+        TelescopeBorder = { fg = colors.light_white },
+        TelescopeTitle = { fg = colors.dark_blue },
+        TelescopePromptNormal = { fg = colors.foreground },
+        TelescopePromptPrefix = { fg = colors.dark_blue },
+        TelescopeSelectionCaret = { fg = colors.background },
+        TelescopeSelection = { fg = colors.foreground, bg = colors.light_white },
+        TelescopeMatching = { fg = colors.light_green },
+        TelescopeResultsComment = { fg = colors.dark_blue },
+        TelescopeNormal = { fg = colors.light_blue, bg = colors.background },
     },
 
     NvimTree = {

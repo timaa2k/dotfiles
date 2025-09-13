@@ -34,6 +34,16 @@ lazy.setup(
 -- Plugins
   {
     {
+      "folke/snacks.nvim",
+      priority = 1000,
+      lazy = false,
+      opts = {
+        bigfile = { enabled = true },
+        quickfile = { enabled = true }
+      }
+    },
+
+    {
       'nvim-treesitter/nvim-treesitter',
       branch = 'master',
       lazy = false, 
@@ -57,6 +67,32 @@ lazy.setup(
       config = function()
         require('configs._lspconfig')
       end
+    },
+
+    {
+      'nvim-telescope/telescope.nvim',
+      dependencies = { 'nvim-lua/plenary.nvim' },
+      config = function()
+        require('telescope.pickers.layout_strategies').custom_bottom_pane = function(picker, max_columns, max_lines, layout_config)
+          local layout = require('telescope.pickers.layout_strategies').bottom_pane(picker, max_columns, max_lines, layout_config)
+          layout.prompt.borderchars = { '─', '│', '─', '│', '┌', '┐', '┘', '└' }
+          layout.results.borderchars = { '─', '│', '─', '│', '├', '┤', '┘', '└' }
+          layout.preview.borderchars = { '─', '│', '─', '│', '┌', '┐', '┘', '└' }
+          return layout
+        end
+        require('telescope').setup({
+          defaults = {
+            layout_strategy = "custom_bottom_pane",
+            layout_config = {
+              prompt_position = "top",
+            },
+            sorting_strategy = "ascending",
+            path_display = {
+              "filename_first",
+            }
+          },
+        })
+        end
     },
 
     {

@@ -79,47 +79,8 @@ keymap.set("n", "<Leader>ll", "<C-i>", { desc = "Jump to newer cursor position" 
 -- lspconfig
 keymap.set("n", "<Leader>lr", ":LspRestart<CR>", { desc = "Restart LSP" })
 
--- FzfLua
-keymap.set("n", "<Leader>fz", ":FzfLua<CR>")
-keymap.set("n", "<Leader>ff", ":FzfLua files<CR>")
-keymap.set("n", "<Leader>fg", ":FzfLua live_grep<CR>")
-keymap.set("n", "<Leader>fc", ":FzfLua git_commits<CR>")
-keymap.set("n", "<Leader>fb", ":FzfLua buffers<CR>")
-keymap.set("n", "<Leader>fh", ":FzfLua help_tags<CR>")
-keymap.set("n", "<Leader>fk", ":FzfLua keymaps<CR>")
-keymap.set("n", "<Leader>fe", ":FzfLua lsp_document_diagnostics<CR>")
-keymap.set("n", "<Leader>fr", ":FzfLua lsp_references<CR>")
-keymap.set("n", "<Leader>fd", ":FzfLua lsp_typedefs<CR>")
-
--- Trouble
-keymap.set("n", "<Leader>xx", ":TroubleToggle<CR>")
-keymap.set("n", "<Leader>xr", ":TroubleToggle lsp_references<CR>")
-
--- null-ls
-if vim.fn.has("nvim-0.8") == 1 then
-  keymap.set("n", "<Leader>pp", function()
-    return vim.lsp.buf.format()
-  end, { desc = "Fix document formatting" })
-else
-  keymap.set("n", "<Leader>pp", function()
-    return vim.lsp.buf.formatting()
-  end, { desc = "Fix document formatting" })
-end
-
-keymap.set("v", "<Leader>pp", function()
-  return vim.lsp.buf.range_formatting()
-end, { desc = "Fix document formatting" })
-
--- FTermo
-keymap.set({ "n", "t" }, "<C-t>", function()
-  return require("FTerm").toggle()
-end, { desc = "Toggle floating terminal" })
-
--- hop
-keymap.set("n", "<C-g>", function()
-  return require("hop").hint_char2({ uppercase_labels = true })
-end, { desc = "Hop with 2 characters" })
-
--- b64.nvim
-keymap.set("v", "<leader>be", ":<C-u>lua require('b64').encode()<CR>", { desc = "Encode text with base64" })
-keymap.set("v", "<leader>bd", ":<C-u>lua require('b64').decode()<CR>", { desc = "Decode base64 encoded text" })
+local builtin = require("telescope.builtin")
+keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
+keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
+keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
+keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
