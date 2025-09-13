@@ -1,0 +1,31 @@
+#!/usr/bin/env dotslash
+
+{
+    "name": "go",
+    "platforms": {
+        "macos-aarch64": {
+            "size": 57906702,
+            "hash": "sha256",
+            "digest": "68deebb214f39d542e518ebb0598a406ab1b5a22bba8ec9ade9f55fb4dd94a6c",
+            "format": "tar.gz",
+            "path": "go/bin/go",
+            "providers": [
+                {
+                    "url": "https://go.dev/dl/go1.25.1.darwin-arm64.tar.gz"
+                }
+            ]
+        },
+        "linux-x86_64": {
+            "size": 3275963,
+            "hash": "sha256",
+            "digest": "93f47d76abe328c402ef712e9ac92aa6d5bc84d5adcbcaf0bbc5665e5275a941",
+            "format": "tar.gz",
+            "path": "go/bin/go",
+            "providers": [
+                {
+                    "url": "https://github.com/sharkdp/bat/releases/download/v0.25.0/bat-v0.25.0-x86_64-unknown-linux-musl.tar.gz"
+                }
+            ]
+        }
+    }
+}

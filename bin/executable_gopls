@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if [ ! -f $(go env GOPATH)/bin/gopls ]; then
+  go install golang.org/x/tools/gopls@v0.20.0
+fi
+
+exec $(go env GOPATH)/bin/gopls "$@"
