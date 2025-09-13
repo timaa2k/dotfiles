@@ -66,7 +66,7 @@ function M.load()
 
     -- loop trough the treesitter table and highlight every member
     for group, colors in pairs(seoul256.treesitter) do
-        highlight(group, colors)
+        highlight(string.gsub(group, "TS", "@"), colors)
     end
 
     -- loop trough the lsp table and highlight every member

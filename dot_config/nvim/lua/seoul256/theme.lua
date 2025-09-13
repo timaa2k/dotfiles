@@ -28,7 +28,7 @@ M.syntax = {
     PreCondit = { fg = colors.light_magenta, bg = colors.none },
     PreProc = { fg = colors.light_magenta, bg = colors.none },
     Repeat = {},
-    Special = { fg = colors.dark_white, bg = colors.none },
+    Special = { fg = colors.dark_blue },
     SpecialChar = { fg = colors.light_cyan, bg = colors.none },
     SpecialComment = { fg = colors.light_cyan, bg = colors.none },
     Statement = { fg = colors.light_cyan, bg = colors.none },
@@ -116,14 +116,14 @@ M.treesitter = {
     TSAttribute = { fg = colors.dark_yellow },
     TSBoolean = { fg = colors.dark_yellow },
     TSCharacter = { fg = colors.dark_yellow },
-    TSComment = { fg = colors.dark_green },
+    TSComment = { fg = colors.light_black },
     TSConditional = { fg = colors.dark_magenta },
     TSConstBuiltin = { fg = colors.dark_blue },
     TSConstMacro = { fg = colors.dark_blue },
     TSConstant = { fg = colors.dark_yellow },
     TSConstructor = { fg = colors.dark_magenta },
     TSDanger = {}, -- TODO
-    TSEmphasis = { fg = colors.light_dark_blue },
+    TSEmphasis = { fg = colors.dark_blue },
     TSEnvironment = {}, -- TODO
     TSEnvironmentName = {}, -- TODO
     TSError = { fg = colors.dark_red },
@@ -134,8 +134,8 @@ M.treesitter = {
     TSFuncMacro = { fg = colors.dark_blue },
     TSFunction = { fg = colors.dark_blue },
     TSInclude = { fg = colors.dark_cyan },
-    TSKeyword = { fg = colors.dark_magenta },
-    TSKeywordFunction = { fg = colors.dark_magenta },
+    TSKeyword = { fg = colors.dark_blue },
+    TSKeywordFunction = { fg = colors.dark_blue },
     TSKeywordOperator = {}, -- TODO
     TSKeywordReturn = {}, -- TODO
     TSLabel = { fg = colors.dark_red },
@@ -147,17 +147,17 @@ M.treesitter = {
     TSNote = {}, -- TODO
     TSNumber = { fg = colors.dark_yellow },
     TSOperator = { fg = colors.dark_cyan },
-    TSParameter = { fg = colors.light_dark_blue },
-    TSParameterReference = { fg = colors.light_dark_blue },
-    TSProperty = { fg = colors.light_dark_blue },
+    TSParameter = { fg = colors.dark_blue },
+    TSParameterReference = { fg = colors.dark_blue },
+    TSProperty = { fg = colors.dark_blue },
     TSPunctBracket = { fg = colors.dark_cyan },
     TSPunctDelimiter = { fg = colors.dark_cyan },
     TSPunctSpecial = { fg = colors.dark_cyan },
     TSRepeat = { fg = colors.dark_magenta },
     TSStrike = {}, -- TODO
-    TSString = { fg = colors.dark_black },
-    TSStringEscape = { fg = colors.dark_white },
-    TSStringRegex = { fg = colors.dark_blue },
+    TSString = { fg = colors.extra_orange, bg = colors.none },
+    TSStringEscape = { fg = colors.extra_orange, bg = colors.none },
+    TSStringRegex = { fg = colors.extra_orange, bg = colors.none },
     TSStringSpecial = {}, -- TODO
     TSStrong = {}, -- TODO
     TSSymbol = { fg = colors.dark_yellow },
@@ -166,13 +166,13 @@ M.treesitter = {
     TSTagDelimiter = { fg = colors.dark_yellow },
     TSText = { fg = colors.foreground },
     TSTextReference = { fg = colors.dark_yellow }, -- FIXME ???
-    TSTitle = { fg = colors.light_dark_blue, bg = colors.none, style = "bold" },
-    TSType = { fg = colors.dark_magenta },
-    TSTypeBuiltin = { fg = colors.dark_magenta },
+    TSTitle = { fg = colors.dark_blue, bg = colors.none, style = "bold" },
+    TSType = { fg = colors.dark_blue },
+    TSTypeBuiltin = { fg = colors.dark_blue },
     TSURI = { fg = colors.dark_blue },
     TSUnderline = { fg = colors.foreground, bg = colors.none, style = "underline" },
-    TSVariable = { fg = colors.light_black },
-    TSVariableBuiltin = { fg = colors.light_black },
+    TSVariable = { fg = colors.light_blue },
+    TSVariableBuiltin = { fg = colors.light_blue },
     TSWarning = {}, -- TODO
 }
 
@@ -182,23 +182,23 @@ M.lsp = {
     LspCodeLens = {}, -- TODO
     LspDiagnosticsDefaultError = { fg = colors.dark_red },
     LspDiagnosticsDefaultHint = { fg = colors.dark_magenta },
-    LspDiagnosticsDefaultInformation = { fg = colors.light_dark_blue },
+    LspDiagnosticsDefaultInformation = { fg = colors.dark_blue },
     LspDiagnosticsDefaultWarning = { fg = colors.dark_yellow },
     LspDiagnosticsFloatingError = { fg = colors.dark_red },
     LspDiagnosticsFloatingHint = { fg = colors.dark_magenta },
-    LspDiagnosticsFloatingInformation = { fg = colors.light_dark_blue },
+    LspDiagnosticsFloatingInformation = { fg = colors.dark_blue },
     LspDiagnosticsFloatingWarning = { fg = colors.dark_yellow },
     LspDiagnosticsSignError = { fg = colors.dark_red },
     LspDiagnosticsSignHint = { fg = colors.dark_magenta },
-    LspDiagnosticsSignInformation = { fg = colors.light_dark_blue },
+    LspDiagnosticsSignInformation = { fg = colors.dark_blue },
     LspDiagnosticsSignWarning = { fg = colors.dark_yellow },
     LspDiagnosticsUnderlineError = { style = "undercurl", sp = colors.dark_red },
-    LspDiagnosticsUnderlineHint = { style = "undercurl", sp = colors.light_dark_blue },
-    LspDiagnosticsUnderlineInformation = { style = "undercurl", sp = colors.light_dark_blue },
+    LspDiagnosticsUnderlineHint = { style = "undercurl", sp = colors.dark_blue },
+    LspDiagnosticsUnderlineInformation = { style = "undercurl", sp = colors.dark_blue },
     LspDiagnosticsUnderlineWarning = { style = "undercurl", sp = colors.dark_yellow },
     LspDiagnosticsVirtualTextError = { fg = colors.dark_red },
     LspDiagnosticsVirtualTextHint = { fg = colors.dark_magenta },
-    LspDiagnosticsVirtualTextInformation = { fg = colors.light_dark_blue },
+    LspDiagnosticsVirtualTextInformation = { fg = colors.dark_blue },
     LspDiagnosticsVirtualTextWarning = { fg = colors.dark_yellow },
     LspReferenceRead = { fg = colors.light_blue, bg = colors.dark_yellow },
     LspReferenceText = { fg = colors.light_blue, bg = colors.dark_yellow },
@@ -224,7 +224,7 @@ M.plugins = {
     },
 
     Neogit = {
-        NeogitBranch = { fg = colors.light_dark_blue },
+        NeogitBranch = { fg = colors.dark_blue },
         NeogitRemote = { fg = colors.dark_magenta },
         NeogitHunkHeader = { fg = colors.foreground, bg = colors.dark_yellow },
         NeogitHunkHeaderHighlight = { fg = colors.dark_blue, bg = colors.contrast },
@@ -269,7 +269,7 @@ M.plugins = {
         NvimTreeImageFile = { fg = colors.dark_yellow },
         NvimTreeExecFile = { fg = colors.dark_green },
         NvimTreeSpecialFile = { fg = colors.dark_magenta, style = "underline" },
-        NvimTreeFolderName = { fg = colors.light_dark_blue },
+        NvimTreeFolderName = { fg = colors.dark_blue },
         NvimTreeEmptyFolderName = { fg = colors.dark_white },
         NvimTreeFolderIcon = { fg = colors.light_blue },
         NvimTreeIndentMarker = { fg = colors.dark_white },
@@ -277,7 +277,7 @@ M.plugins = {
         -- TODO not sure this goes here
         LspDiagnosticsError = { fg = colors.dark_red },
         LspDiagnosticsWarning = { fg = colors.dark_yellow },
-        LspDiagnosticsInformation = { fg = colors.light_dark_blue },
+        LspDiagnosticsInformation = { fg = colors.dark_blue },
         LspDiagnosticsHint = { fg = colors.dark_magenta },
     },
 
@@ -293,18 +293,18 @@ M.plugins = {
     LspSaga = {
         DiagnosticError = { fg = colors.dark_red },
         DiagnosticWarning = { fg = colors.dark_yellow },
-        DiagnosticInformation = { fg = colors.light_dark_blue },
+        DiagnosticInformation = { fg = colors.dark_blue },
         DiagnosticHint = { fg = colors.dark_magenta },
         DiagnosticTruncateLine = { fg = colors.foreground },
         LspFloatWinNormal = { bg = colors.dark_white },
         LspFloatWinBorder = { fg = colors.dark_magenta },
         LspSagaBorderTitle = { fg = colors.dark_cyan },
-        LspSagaHoverBorder = { fg = colors.light_dark_blue },
+        LspSagaHoverBorder = { fg = colors.dark_blue },
         LspSagaRenameBorder = { fg = colors.dark_green },
         LspSagaDefPreviewBorder = { fg = colors.dark_green },
         LspSagaCodeActionBorder = { fg = colors.dark_blue },
         LspSagaFinderdark_white = { fg = colors.dark_green },
-        LspSagaCodeActionTitle = { fg = colors.light_dark_blue },
+        LspSagaCodeActionTitle = { fg = colors.dark_blue },
         LspSagaCodeActionContent = { fg = colors.dark_magenta },
         LspSagaSignatureHelpBorder = { fg = colors.light_red },
         ReferencesCount = { fg = colors.dark_magenta },
@@ -376,8 +376,8 @@ end
 
 if vim.g.seoul256_italic_variables == true then
     M.syntax.Identifier = { fg = colors.light_red, bg = colors.none, style = "italic" }
-    M.treesitter.TSVariable = { fg = colors.light_black, style = "italic" }
-    M.treesitter.TSVariableBuiltin = { fg = colors.light_black, style = "italic" }
+    M.treesitter.TSVariable = { fg = colors.light_blue, style = "italic" }
+    M.treesitter.TSVariableBuiltin = { fg = colors.light_blue, style = "italic" }
 end
 
 if vim.g.seoul256_borders == true then
