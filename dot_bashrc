@@ -33,7 +33,7 @@ export PATH=${HOME}/bin:${HOME}/.local/bin:/run/current-system/sw/bin:${PATH}
 export PATH=$PATH:${HOME}/bin/go/bin
 
 export SHELL=$(which bash)
-export EDITOR=$(which hx)
+export EDITOR=$(which vim)
 
 export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS="--height 80% --color=light"
