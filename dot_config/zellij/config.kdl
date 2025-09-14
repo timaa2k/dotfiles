@@ -1,3 +1,5 @@
+scrollback_editor "nvim"
+
 simplified_ui true
 
 default_layout "disable-status-bar"
@@ -13,8 +15,6 @@ on_force_close "detach"
 scroll_buffer_size 100000
 
 default_mode "normal"
-
-copy_command "pbcopy"
 
 copy_clipboard "system"
 
@@ -51,7 +51,7 @@ load_plugins {
 themes {
     default {
         fg "#5c5c5c"
-        bg "#e1e1e1"
+        bg "#d8af5f"
         black "#e1e1e1"
         red "#cc6666"
         green "#81a2be"
@@ -65,6 +65,9 @@ themes {
 }
 
 keybinds clear-defaults=true {
+    locked {
+        bind "Ctrl g" { SwitchToMode "Normal"; }
+    }
     tmux {
         bind "[" { SwitchToMode "Scroll"; }
 
@@ -109,11 +112,6 @@ keybinds clear-defaults=true {
         bind "k" { MoveFocus "Up"; SwitchToMode "Normal"; }
         // Renaming panes
         bind "." { SwitchToMode "RenamePane"; PaneNameInput 0; }
-        // Resizing panes
-        bind "H" { Resize "Increase Left"; }
-        bind "L" { Resize "Increase Right"; }
-        bind "K" { Resize "Increase Up"; }
-        bind "J" { Resize "Increase Down"; }
 
         // bind "o" { FocusNextPane; }
 
@@ -182,5 +180,67 @@ keybinds clear-defaults=true {
     shared_except "tmux" "locked" {
         // Enter tmux mode
         bind "Ctrl a" { SwitchToMode "Tmux"; }
+    }
+    shared_except "locked" {
+        bind "Ctrl h" {
+            MessagePlugin "https://github.com/hiasr/vim-zellij-navigator/releases/download/0.3.0/vim-zellij-navigator.wasm" {
+                name "move_focus";
+                payload "left";
+                move_mod "ctrl";
+                use_arrow_keys "false";
+            };
+        }
+        bind "Ctrl j" {
+            MessagePlugin "https://github.com/hiasr/vim-zellij-navigator/releases/download/0.3.0/vim-zellij-navigator.wasm" {
+                name "move_focus";
+                payload "down";
+                move_mod "ctrl";
+                use_arrow_keys "false";
+            };
+        }
+        bind "Ctrl k" {
+            MessagePlugin "https://github.com/hiasr/vim-zellij-navigator/releases/download/0.3.0/vim-zellij-navigator.wasm" {
+                name "move_focus";
+                payload "up";
+                move_mod "ctrl";
+                use_arrow_keys "false";
+            };
+        }
+        bind "Ctrl l" {
+            MessagePlugin "https://github.com/hiasr/vim-zellij-navigator/releases/download/0.3.0/vim-zellij-navigator.wasm" {
+                name "move_focus";
+                payload "right";
+                move_mod "ctrl";
+                use_arrow_keys "false";
+            };
+        }
+        bind "Alt h" {
+            MessagePlugin "https://github.com/hiasr/vim-zellij-navigator/releases/download/0.3.0/vim-zellij-navigator.wasm" {
+                name "resize";
+                payload "left";
+                resize_mod "alt"; 
+            };
+        }
+        bind "Alt j" {
+            MessagePlugin "https://github.com/hiasr/vim-zellij-navigator/releases/download/0.3.0/vim-zellij-navigator.wasm" {
+                name "resize";
+                payload "down";
+                resize_mod "alt";
+            };
+        }
+        bind "Alt k" {
+            MessagePlugin "https://github.com/hiasr/vim-zellij-navigator/releases/download/0.3.0/vim-zellij-navigator.wasm" {
+                name "resize";
+                payload "up";
+                resize_mod "alt";
+            };
+        }
+        bind "Alt l" {
+            MessagePlugin "https://github.com/hiasr/vim-zellij-navigator/releases/download/0.3.0/vim-zellij-navigator.wasm" {
+                name "resize";
+                payload "right";
+                resize_mod "alt";
+            };
+        }
     }
 }

@@ -42,7 +42,6 @@ o.tabstop = 4                                                -- 1 tab is 4 space
 o.softtabstop = 4                                            --
 o.autoindent = true                                          -- Copy indentation from previous line when starting new line
 o.cindent = true                                             -- Copy indentation from file being edited
-o.clipboard = 'unnamedplus'                                  -- Use unnamedplus register
 o.spell = true                                               -- Enable spelling
 o.spelllang = 'en_us'                                        -- Spelling language
 o.showcmd = true                                             --
@@ -51,6 +50,7 @@ o.updatetime = 300                                           --
 o.ttimeout = true                                            --
 o.ttimeoutlen = 100                                          --
 o.timeoutlen = 3000                                          --
+o.clipboard = 'unnamedplus,unnamed'                          -- Make clipboard work on macos
 
 -- Temporary undodir
 local undodir = '/tmp/.vim-undodir-' .. vim.env.USER

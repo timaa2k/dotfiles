@@ -96,6 +96,21 @@ lazy.setup(
     },
 
     {
+      'mrjones2014/smart-splits.nvim',
+      config = function()
+        require('smart-splits').setup({
+          at_edge = 'stop',
+        })
+      end
+    },
+
+    {
+      'swaits/zellij-nav.nvim',
+      lazy = true,
+      event = "VeryLazy",
+    },
+
+    {
       'nvim-lualine/lualine.nvim',
       dependencies = { 'kyazdani42/nvim-web-devicons' },
       config = function()
@@ -137,7 +152,6 @@ lazy.setup(
         require('which-key').setup()
       end
     },
-
   },
 -- Configurations
   {
