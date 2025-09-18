@@ -20,7 +20,7 @@
             "hash": "sha256",
             "digest": "963624f83ae8da4eb6bdc5907c15d67bbcbaf41918c2999ba861cacb7bc0f104",
             "format": "tar.zst",
-            "path": "uv-x86_64-unknown-linux-musl/uvx",
+            "path": "python/install/bin/python3",
             "providers": [
                 {
                     "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20250723/cpython-3.12.11+20250723-x86_64-unknown-linux-musl-lto+static-full.tar.zst"

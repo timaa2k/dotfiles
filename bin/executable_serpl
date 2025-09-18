@@ -1,0 +1,31 @@
+#!/usr/bin/env dotslash
+ 
+{
+    "name": "serpl",
+    "platforms": {
+        "macos-aarch64": {
+            "size": 2092422,
+            "hash": "sha256",
+            "digest": "f5f75609780150146221a199fafaa445333b2bbc36f1cc750307b3620ae5453c",
+            "format": "tar.gz",
+            "path": "serpl",
+            "providers": [
+                {
+                    "url": "https://github.com/yassinebridi/serpl/releases/download/0.3.4/serpl-0.3.4-macos-arm64.tar.gz"
+                }
+            ]
+        },
+        "linux-x86_64": {
+            "size": 2409044,
+            "hash": "sha256",
+            "digest": "3d9eae74391ead2514cfa96c20037be652166a53b20e09176e16f8c26e605294",
+            "format": "tar.gz",
+            "path": "serpl",
+            "providers": [
+                {
+                    "url": "https://github.com/yassinebridi/serpl/releases/download/0.3.4/serpl-0.3.4-linux-x86_64.tar.gz"
+                }
+            ]
+        }
+    }
+}

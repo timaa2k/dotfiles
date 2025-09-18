@@ -1,0 +1,31 @@
+#!/usr/bin/env dotslash
+ 
+{
+    "name": "slumber",
+    "platforms": {
+        "macos-aarch64": {
+            "size": 5189260,
+            "hash": "sha256",
+            "digest": "c77380fe661909b6dcd9e7e63677168dd43aa6a02497d0903b1a42b23bec299b",
+            "format": "tar.xz",
+            "path": "slumber-aarch64-apple-darwin/slumber",
+            "providers": [
+                {
+                    "url": "https://github.com/LucasPickering/slumber/releases/download/v4.0.1/slumber-aarch64-apple-darwin.tar.xz"
+                }
+            ]
+        },
+        "linux-x86_64": {
+            "size": 6183512,
+            "hash": "sha256",
+            "digest": "b1ce2a007598d40e1bc419b45a8d3d28abafe42667d46a35622739f34307f0a3",
+            "format": "tar.xz",
+            "path": "slumber-x86_64-unknown-linux-musl/slumber",
+            "providers": [
+                {
+                    "url": "https://github.com/LucasPickering/slumber/releases/download/v4.0.1/slumber-x86_64-unknown-linux-musl.tar.xz"
+                }
+            ]
+        }
+    }
+}

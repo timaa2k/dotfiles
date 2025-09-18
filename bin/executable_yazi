@@ -1,0 +1,31 @@
+#!/usr/bin/env dotslash
+ 
+{
+    "name": "yazi",
+    "platforms": {
+        "macos-aarch64": {
+            "size": 7175032,
+            "hash": "sha256",
+            "digest": "8bdf137e8f84cd11f9dd866ff2b68e4886d1055ab21fe2e0c6f6a0515d2bfd70",
+            "format": "zip",
+            "path": "yazi-aarch64-apple-darwin/yazi",
+            "providers": [
+                {
+                    "url": "https://github.com/sxyazi/yazi/releases/download/v25.5.31/yazi-aarch64-apple-darwin.zip"
+                }
+            ]
+        },
+        "linux-x86_64": {
+            "size": 8489576,
+            "hash": "sha256",
+            "digest": "a2fdc9c35719fa72d94820893eb2fedd93fd1c418c2cf568702643526c358f7a",
+            "format": "zip",
+            "path": "yazi-x86_64-unknown-linux-musl/yazi",
+            "providers": [
+                {
+                    "url": "https://github.com/sxyazi/yazi/releases/download/v25.5.31/yazi-x86_64-unknown-linux-musl.zip"
+                }
+            ]
+        }
+    }
+}

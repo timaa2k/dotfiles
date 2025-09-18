@@ -1,0 +1,31 @@
+#!/usr/bin/env dotslash
+ 
+{
+    "name": "lazysql",
+    "platforms": {
+        "macos-aarch64": {
+            "size": 5364056,
+            "hash": "sha256",
+            "digest": "32765a9ffa94a4a151348231406e486ebfd052950d0acf823cc6b1bc82078ad3",
+            "format": "tar.gz",
+            "path": "lazysql",
+            "providers": [
+                {
+                    "url": "https://github.com/jorgerojas26/lazysql/releases/download/v0.4.1/lazysql_Darwin_arm64.tar.gz"
+                }
+            ]
+        },
+        "linux-x86_64": {
+            "size": 5566303,
+            "hash": "sha256",
+            "digest": "0981a8cdd94e0168d5a71dda76f9723219a32c24c63d3a6454c00a6f19da378a",
+            "format": "tar.gz",
+            "path": "lazysql",
+            "providers": [
+                {
+                    "url": "https://github.com/jorgerojas26/lazysql/releases/download/v0.4.1/lazysql_Linux_x86_64.tar.gz"
+                }
+            ]
+        }
+    }
+}
