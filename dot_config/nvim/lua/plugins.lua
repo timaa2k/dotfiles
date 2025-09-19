@@ -39,7 +39,8 @@ lazy.setup(
       lazy = false,
       opts = {
         bigfile = { enabled = true },
-        quickfile = { enabled = true }
+        quickfile = { enabled = true },
+        terminal = { enabled = true }
       }
     },
 

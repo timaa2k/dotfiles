@@ -53,35 +53,28 @@
   services.nix-daemon.enable = true;
 
   environment.systemPackages = with pkgs; [
-    bat
     kitty
-    tmux
-    fzf
     git
     curl
     findutils
     coreutils
     diffutils
     less
-    jq
     yq
     tree
     unzip
     htop
     gnupg
-    neovim
     ripgrep
     delta
     sad
     fd
     lua
     nodejs
-    qemu
-    libvirt
     xz
     buildozer
-    ncdu
     youtube-dl
+    wget
   ];
 
   programs.bash.enable = true;

@@ -79,6 +79,10 @@ keymap.set("n", "<Leader>ll", "<C-i>", { desc = "Jump to newer cursor position" 
 -- lspconfig
 keymap.set("n", "<Leader>lr", ":LspRestart<CR>", { desc = "Restart LSP" })
 
+-- snacks
+local terminal = require("snacks.terminal")
+keymap.set("n", "<C-b>", terminal.toggle, { desc = "Toggle terminal window" })
+
 -- telescope
 local builtin = require("telescope.builtin")
 keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
@@ -92,6 +96,10 @@ keymap.set("n", "<C-j>", zellij.down, { silent = true, desc = "Zellij navigation
 keymap.set("n", "<C-k>", zellij.up, { silent = true, desc = "Zellij navigation up" })
 keymap.set("n", "<C-h>", zellij.left, { silent = true, desc = "Zellij navigation left" })
 keymap.set("n", "<C-l>", zellij.right, { silent = true, desc = "Zellij navigation right" })
+keymap.set("t", "<C-j>", zellij.down, { silent = true, desc = "Zellij navigation down" })
+keymap.set("t", "<C-k>", zellij.up, { silent = true, desc = "Zellij navigation up" })
+keymap.set("t", "<C-h>", zellij.left, { silent = true, desc = "Zellij navigation left" })
+keymap.set("t", "<C-l>", zellij.right, { silent = true, desc = "Zellij navigation right" })
 
 -- smart-splits
 -- moving between splits
@@ -106,6 +114,10 @@ keymap.set("n", "<A-h>", require("smart-splits").resize_left)
 keymap.set("n", "<A-j>", require("smart-splits").resize_down)
 keymap.set("n", "<A-k>", require("smart-splits").resize_up)
 keymap.set("n", "<A-l>", require("smart-splits").resize_right)
+keymap.set("t", "<A-h>", require("smart-splits").resize_left)
+keymap.set("t", "<A-j>", require("smart-splits").resize_down)
+keymap.set("t", "<A-k>", require("smart-splits").resize_up)
+keymap.set("t", "<A-l>", require("smart-splits").resize_right)
 -- swapping buffers between windows
 keymap.set("n", "<leader><leader>h", require("smart-splits").swap_buf_left)
 keymap.set("n", "<leader><leader>j", require("smart-splits").swap_buf_down)
