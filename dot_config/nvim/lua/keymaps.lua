@@ -85,6 +85,7 @@ keymap.set("n", "<C-b>", terminal.toggle, { desc = "Toggle terminal window" })
 
 -- telescope
 local builtin = require("telescope.builtin")
+keymap.set("n", "<C-z>", builtin.find_files, { desc = "Telescope find files" })
 keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
 keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
 keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
@@ -123,3 +124,6 @@ keymap.set("n", "<leader><leader>h", require("smart-splits").swap_buf_left)
 keymap.set("n", "<leader><leader>j", require("smart-splits").swap_buf_down)
 keymap.set("n", "<leader><leader>k", require("smart-splits").swap_buf_up)
 keymap.set("n", "<leader><leader>l", require("smart-splits").swap_buf_right)
+
+-- yazi file manager
+keymap.set("n", "<C-q>", ":Yazi<CR>", { desc = "Open yazi file manager" })
