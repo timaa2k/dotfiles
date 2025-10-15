@@ -75,6 +75,7 @@
     buildozer
     youtube-dl
     wget
+    ncdu
   ];
 
   programs.bash.enable = true;
