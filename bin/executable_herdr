@@ -1,0 +1,24 @@
+#!/usr/bin/env dotslash
+{
+  "name": "herdr",
+  "platforms": {
+    "macos-aarch64": {
+      "size": 22536176,
+      "hash": "sha256",
+      "digest": "fb77c2232a05a8035421382c894392f4174e4e38a18e48af3dd0290157c3a7e2",
+      "path": "herdr",
+      "providers": [
+        {"url": "https://github.com/herdrdev/herdr/releases/download/v0.9.5/herdr-macos-aarch64"}
+      ]
+    },
+    "linux-x86_64": {
+      "size": 30285672,
+      "hash": "sha256",
+      "digest": "14d9e8bc8b4a9e0118d77c32266f76d461f09b40342eb23752960bd89f59929d",
+      "path": "herdr",
+      "providers": [
+        {"url": "https://github.com/herdrdev/herdr/releases/download/v0.9.5/herdr-linux-x86_64"}
+      ]
+    }
+  }
+}
