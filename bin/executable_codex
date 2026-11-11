@@ -1,0 +1,31 @@
+#!/usr/bin/env dotslash
+
+{
+    "name": "codex",
+    "platforms": {
+        "macos-aarch64": {
+            "size": 108643084,
+            "hash": "sha256",
+            "digest": "4c97fbdafba21e172254107939489691195f34712cf0cb31293e5e21be8f5bfa",
+            "format": "tar.gz",
+            "path": "codex-aarch64-apple-darwin",
+            "providers": [
+                {
+                    "url": "https://github.com/openai/codex/releases/download/rust-v0.167.1/codex-aarch64-apple-darwin.tar.gz"
+                }
+            ]
+        },
+        "linux-x86_64": {
+            "size": 114431774,
+            "hash": "sha256",
+            "digest": "3eefec1b400ea67d01a1a091ef98f8749304fdef89577beeeb97b8aee7c75e32",
+            "format": "tar.gz",
+            "path": "codex-aarch64-unknown-linux-musl",
+            "providers": [
+                {
+                    "url": "https://github.com/openai/codex/releases/download/rust-v0.167.1/codex-aarch64-unknown-linux-musl.tar.gz"
+                }
+            ]
+        }
+    }
+}
