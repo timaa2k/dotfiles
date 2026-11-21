@@ -1,0 +1,26 @@
+#!/usr/bin/env dotslash
+{
+  "name": "pi",
+  "platforms": {
+    "macos-aarch64": {
+      "size": 48128107,
+      "hash": "sha256",
+      "digest": "6429287b7ae98d726ec577815d14fd680e7c587e89ecc5153b4a145dc4adba33",
+      "format": "tar.gz",
+      "path": "pi/pi",
+      "providers": [
+        {"url": "https://github.com/earendil-works/pi/releases/download/v1.6.0/pi-darwin-arm64.tar.gz"}
+      ]
+    },
+    "linux-x86_64": {
+      "size": 58977130,
+      "hash": "sha256",
+      "digest": "ef77dbe4379b3bdeb425a1e1b862fa3c915c255000dfe4965c98eee96a5765d1",
+      "format": "tar.gz",
+      "path": "pi/pi",
+      "providers": [
+        {"url": "https://github.com/earendil-works/pi/releases/download/v1.6.0/pi-linux-x64.tar.gz"}
+      ]
+    }
+  }
+}

@@ -1,0 +1,48 @@
+# Only configure interactive shells.
+[[ -o interactive ]] || return
+
+# Keep Ctrl-S from pausing terminal output.
+[[ -t 0 ]] && stty -ixon
+
+HISTFILE="${ZDOTDIR:-$HOME}/.zsh_history"
+HISTSIZE=50000
+SAVEHIST=50000
+setopt HIST_IGNORE_DUPS HIST_IGNORE_SPACE INC_APPEND_HISTORY
+
+export PATH="${PATH}:/opt/homebrew/bin:${HOME}/.local/bin:${HOME}/bin:${HOME}/bin/go/bin"
+export SHELL="$(whence -p zsh)"
+export EDITOR="$(whence -p vim)"
+
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
+export FZF_DEFAULT_OPTS="--height 80% --color=light"
+
+export BAT_STYLE=changes,header,numbers,snip
+export BAT_THEME=base16
+
+if [[ -f ~/.zsh_aliases ]]; then
+    source ~/.zsh_aliases
+fi
+
+autoload -Uz compinit
+compinit
+
+if (( $+commands[fzf] )); then
+    eval "$(fzf --zsh)"
+fi
+
+autoload -Uz add-zsh-hook
+
+_update_prompt() {
+    # %1v displays the branch name literally, including any prompt characters.
+    psvar[1]=$(git branch --no-color 2>/dev/null | sed -n 's/^\* \(.*\)$/ (\1)/p')
+    PROMPT='%n@%m %F{blue}%U%~%u%f%F{green}%1v%f'$'\n'
+    PROMPT+='%(?..%F{red}[%?]%f )'
+
+    if (( ${+IN_NIX_SHELL} )); then
+        PROMPT+='%F{blue}nix-shell>%f '
+    else
+        PROMPT+='%(!.#.$) '
+    fi
+}
+
+add-zsh-hook precmd _update_prompt

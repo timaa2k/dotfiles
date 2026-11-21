@@ -1,0 +1,26 @@
+#!/usr/bin/env dotslash
+{
+  "name": "claude",
+  "platforms": {
+    "macos-aarch64": {
+      "size": 124231556,
+      "hash": "sha256",
+      "digest": "c909e975f01193126bf28da4fa66825db4e9d10fd52b217106fdb3b9c7f6d247",
+      "format": "zst",
+      "path": "claude",
+      "providers": [
+        {"url": "https://downloads.claude.ai/claude-code-releases/2.1.330/darwin-arm64/claude.zst"}
+      ]
+    },
+    "linux-x86_64": {
+      "size": 136550760,
+      "hash": "sha256",
+      "digest": "d53a3f9aab93c87bba0813d1101677677b457100824f5c3604fea9915ac5237a",
+      "format": "zst",
+      "path": "claude",
+      "providers": [
+        {"url": "https://downloads.claude.ai/claude-code-releases/2.1.330/linux-x64/claude.zst"}
+      ]
+    }
+  }
+}

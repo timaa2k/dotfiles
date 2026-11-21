@@ -48,8 +48,50 @@ plugins {
 load_plugins {
 }
 
+// Match the standalone app to Kitty, which resolves Hack to Menlo on this Mac.
+terminal {
+    font "Menlo"
+    // At 14.5 pt, Menlo renders in 17 x 34 pixel cells on this Retina display.
+    font_size 14.5
+    cell_width 1.0
+    padding 0
+    padding_balance true
+    cursor_style "block"
+    cursor_blink false
+
+    // Use Kitty's current grid until the app has a window size of its own.
+    startup_mode "remember"
+    initial_columns 186
+    initial_rows 58
+
+    theme {
+        // Slightly darken ordinary text to approximate Kitty's macos_thicken_font.
+        foreground "#555555"
+        background "#e1e1e1"
+        cursor "#5c5c5c"
+        black "#404040"
+        red "#d53c4d"
+        green "#4fa23b"
+        yellow "#7e9904"
+        blue "#5f819d"
+        magenta "#71577a"
+        cyan "#55807b"
+        white "#bcbcbc"
+        bright_black "#8f8f8f"
+        bright_red "#cc6666"
+        bright_green "#b5bd90"
+        bright_yellow "#d8af5f"
+        bright_blue "#81a2be"
+        bright_magenta "#2eb5c1"
+        bright_cyan "#8abeb7"
+        bright_white "#cccccc"
+    }
+}
+
+theme "custom"
+
 themes {
-    default {
+    custom {
         fg "#5c5c5c"
         bg "#d8af5f"
         black "#e1e1e1"
